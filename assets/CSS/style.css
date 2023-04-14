@@ -15,11 +15,7 @@ body {
     --bt-color2: #FF79DA;
     --highlight-color: #99E2D0;
 }
-.main-title {
-    font-family: 'Shrikhand';
-    font-style: italic;
-    font-weight: 400;
-}
+
 a {
     text-decoration: none;
     color: var(--main-bg-color);
@@ -35,6 +31,9 @@ a {
 }
 .a-i-center {
     align-items: center;
+}
+.inline-block {
+    display: inline-block;
 }
 .pink-gradt-button {
     box-sizing: border-box;
@@ -60,7 +59,7 @@ a {
     padding-bottom: 3.56rem;
 }
 
-/**********section fonctionnement **********/
+/**********section guidelines **********/
 
 /**********section restaurants **********/
 
