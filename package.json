@@ -1,0 +1,11 @@
+{
+  "name": "site_ohmyfood",
+  "version": "1.0.0",
+  "description": "Website project to discover and use SASS and animation possibilities in a learning process. This project is based on OpenClassrooms guidelines and designs.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/css/style.css"
+  },
+  "author": "EvivNotrub",
+  "license": "ISC"
+}
