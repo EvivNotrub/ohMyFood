@@ -1,0 +1,12 @@
+.header {
+    @include flex-column-jc-center;
+
+    &__div-log {
+        &__img {
+            @include image-full-cover;
+        }
+    }
+    &__form {
+        
+    }
+}

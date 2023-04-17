@@ -1,3 +1,37 @@
+* {
+  font-family: "Roboto";
+}
 
+body {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pink-gradt-button {
+  box-sizing: border-box;
+  height: 50px;
+  width: 218px;
+  font-weight: 500;
+  padding: 0.81rem 1rem;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__div-log__img {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=style.css.map */
