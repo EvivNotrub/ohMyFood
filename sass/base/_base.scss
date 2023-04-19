@@ -6,7 +6,29 @@ body {
     font-size: 16px;
     text-align: center;
 }
+h1 {
+    font-size: $big-title;
+}
+h1, p {
+    @extend %no-margin;
+}
 a {
     text-decoration: none;
-    color: $main-bg-color;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none; /*enlever les points de liste et espace par défaut*/
+    padding-left: 0;
+    margin: 0;
+}
+input {
+    background-color: inherit;
+    border: none;
+}
+::placeholder {
+    color: $fourth-color;
+    opacity: 1;
+    font-size: 1rem;
+    font-family: 'Roboto';
 }

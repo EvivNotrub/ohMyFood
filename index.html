@@ -17,35 +17,35 @@
                 </div>
                 <form class="header__form">      <!-- car à terme il sera possible de choisir sa position -->
                     <label class="fa-solid fa-location-dot"></label>
-                    <input type="text" placeholder="Paris, Belleville">
+                    <input type="text" placeholder="Paris, Belleville" size="14">
                 </form>
             </header>
             <main>
-                <section class="discover flex f-column a-i-center">
+                <section class="discover">
                     <h1>Réservez le menu qui vous convient</h1>
-                    <p class="discover">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                    <p class="discover__description">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
                     <a class="pink-gradt-button" href="#restaurants">Explorer nos restaurants</a>
                 </section>
                 <section class="guidelines">
                     <h2>Fonctionnement</h2>
                     <div>
-                        <p>
-                            <span class="inline-block">1</span>
-                            <span class="inline-block">
+                        <p class="guidelines__line">
+                            <span class="guidelines__line__elemt">1</span>
+                            <span class="guidelines__line__elemt">
                                 <img src="assets/images/icones/mobile-screen-button.png" alt="logo de smartphone">
                                 <em>Choisissez un restaurant</em> <!-- em pour mettre en emphase -->
                             </span>
                         </p>
-                        <p>
-                            <span class="inline-block">2</span>
-                            <span class="inline-block">
+                        <p class="guidelines__line">
+                            <span class="guidelines__line__elemt">2</span>
+                            <span class="guidelines__line__elemt">
                                 <img src="assets/images/icones/list-ul.png" alt="logo list">
                                 <em>Composez votre menu</em> <!-- em pour mettre en emphase -->
                             </span>
                         </p>
-                        <p>
-                            <span class="inline-block">3</span>
-                            <span class="inline-block">
+                        <p class="guidelines__line">
+                            <span class="guidelines__line__elemt">3</span>
+                            <span class="guidelines__line__elemt">
                                 <img src="assets/images/icones/store.png" alt="logo représentant une devanture de magasin">
                                 <em>Dégustez au restaurant</em> <!-- em pour mettre en emphase -->
                             </span>
@@ -53,8 +53,8 @@
                     </div>                
                 </section>
                 <section class="section-restaurants">
-                    <h2 id="restaurants__titre">Restaurants</h2>
-                    <div class="restaurants__cards flex">
+                    <h2 id="restaurants__title">Restaurants</h2>
+                    <div class="restaurants__cards">
                         <article class="card-article">
                             <a class="card" href="menu-la-palette-du-gout.html">
                                 <p class="new">Nouveau</p>
@@ -109,15 +109,15 @@
                     </div>
                 </section>
             </main>
-            <footer>
-                <img src="assets/images/ohmyfood.png" alt="logo de l'entreprise de commande de repas en ligne Ohmyfood ">
-                <ul class="footer-links">
+            <footer class="footer">
+                <img class="footer__logo white-svg" src="assets/images/logo/ohmyfood@2x.svg" alt="logo de l'entreprise de commande de repas en ligne Ohmyfood ">
+                <ul class="footer__links">
                     <li>
                         <i class="fa-solid fa-utensils"></i>
                         <a href="#">Proposer un restaurant</a>
                     </li>
                     <li>
-                        <i class="fa-light fa-handshake-angle"></i>
+                        <i class="fa-solid fa-handshake-angle"></i>
                         <a href="#">Devenir partenaire</a>
                     </li>
                     <li><a href="#">Mentions légales</a></li>

@@ -1,12 +1,34 @@
-.header {
-    @include flex-column-jc-center;
 
-    &__div-log {
+/****HEADER****/
+.header {
+    &__div-logo {
+        height: 64px;
+        position: relative;
         &__img {
-            @include image-full-cover;
+            @include header-logo;
         }
     }
-    &__form {
-        
+}
+
+
+/****FOOTER****/
+
+.footer {
+    background-color: $fourth-color;
+    padding: 22px 25px;
+    color: $footer-font-color;
+    @include flex-clm;
+    align-items: baseline;
+    gap: 1rem;
+    &__logo {
+        height: 1.25rem;
     }
+    &__links {
+        @include flex-clm;
+        gap: 0.4375rem;
+        align-items: baseline;
+    }
+}
+.white-svg {
+    @include filter-svg-white;
 }

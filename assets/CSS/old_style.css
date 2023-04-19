@@ -20,18 +20,7 @@ a {
     text-decoration: none;
     color: var(--main-bg-color);
 }
-.flex {
-    display: flex;
-}
-.f-column {
-    flex-direction: column;
-}
-.j-c-center {
-    justify-content: center;
-}
-.a-i-center {
-    align-items: center;
-}
+
 .inline-block {
     display: inline-block;
 }
