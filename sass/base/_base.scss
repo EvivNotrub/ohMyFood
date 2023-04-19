@@ -4,13 +4,12 @@
 body {
     margin: 0;
     font-size: 16px;
-    text-align: center;
 }
-h1 {
+h1, h2 {
     font-size: $big-title;
 }
-h1, p {
-    @extend %no-margin;
+h1, h2, p {
+    @extend %no-margin; /**ici c'est plus un test de fonctionnalité**/
 }
 a {
     text-decoration: none;

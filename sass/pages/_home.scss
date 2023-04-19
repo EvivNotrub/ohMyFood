@@ -21,4 +21,29 @@
 
 .discover {
     padding: 40px 30px;
+    @include flex-clm;
+    gap: 27px;
+    text-align: center;
+    align-items: center;
+    background-color: $secondary-bg-color;
+}
+
+/****GUIDELINES****/
+.guidelines {
+    padding: 23px 20px 68px 32px;
+    &__title {
+        padding: 25px 0;
+        transform: translate(-12px); /*in order to align with the number below wich is 24px wide but halfway translated left*/
+    }
+    &__lines{
+        @include flex-clm;
+        gap: 25px;      
+        &__line {
+            @include guidelines-boxes;
+            &__number {
+                @include guidelines-number;
+            }
+        }
+
+    }
 }

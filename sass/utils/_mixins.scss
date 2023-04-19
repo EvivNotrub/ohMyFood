@@ -10,6 +10,11 @@
     display: flex;
     align-items: center;
 }
+@mixin flex-r-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @mixin flex-clm {
     display: flex;
     flex-direction: column;
@@ -24,4 +29,25 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+@mixin guidelines-boxes {
+    width: 322.5px;
+    height: 73px;
+    background-color: $secondary-bg-color;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    @include flex-r-al-center;
+    gap: 23px;
+    font-weight: 500;
+}
+@mixin guidelines-number {
+    height: 24px;
+    width: 24px;
+    background-color: $bt-color1;
+    border-radius: 50%;
+    text-align: center;
+    color: $footer-font-color;
+    font-size: 0.875rem;
+    transform: translate(-50%);
+    @include flex-r-all-center;
 }
