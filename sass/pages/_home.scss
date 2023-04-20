@@ -20,7 +20,7 @@
 /****DISCOVER*****/
 
 .discover {
-    padding: 40px 30px;
+    padding: $discover-bx-paddg;
     @include flex-clm;
     gap: 27px;
     text-align: center;
@@ -30,7 +30,7 @@
 
 /****GUIDELINES****/
 .guidelines {
-    padding: 23px 20px 68px 32px;
+    padding: $guidelines-bx-paddg;
     &__title {
         padding: 25px 0;
         transform: translate(-12px); /*in order to align with the number below wich is 24px wide but halfway translated left*/
@@ -46,4 +46,24 @@
         }
 
     }
+}
+/****RESTAURANTS****/
+
+.restaurants {
+    background-color: $secondary-bg-color;
+    padding: $restrt-bx-paddg;
+    &__title {
+        padding-bottom: 27px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 18px;
+        & .card {
+            @include article-cards;
+            
+        }
+    }
+
 }

@@ -1,5 +1,14 @@
 @charset "UTF-8";
-h1, h2, p {
+/**********HOME**********/
+/****DISCOVER****/
+/****GUIDELINES****/
+/*ici gauche et droite != car décalage de 12px du rond rose*/
+/****RESTAURANTS****/
+/****TOOLS****/
+/****ELEMENTS OF HOME/FOOTER THAT CAN BE USED ON OTHER PAGES****/
+/****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
+/****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/
+h1, h2, h3, p {
   margin: 0;
 }
 
@@ -16,7 +25,7 @@ h1, h2 {
   font-size: 1.5rem;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   /**ici c'est plus un test de fonctionnalité**/
 }
 
@@ -58,6 +67,7 @@ input {
   justify-content: center;
 }
 
+/****HOME/RESTAURANTS****/
 /****HEADER****/
 .header__div-logo {
   height: 64px;
@@ -139,7 +149,8 @@ input {
   gap: 25px;
 }
 .guidelines__lines__line {
-  width: 322.5px;
+  width: 100%;
+  max-width: 450px;
   height: 73px;
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -158,6 +169,69 @@ input {
   color: #FFFFFF;
   font-size: 0.875rem;
   transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/****RESTAURANTS****/
+.restaurants {
+  background-color: #F7F7F7;
+  padding: 50px 15px;
+}
+.restaurants__title {
+  padding-bottom: 27px;
+}
+.restaurants__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 18px;
+}
+.restaurants__cards .card {
+  height: 251px;
+  width: 100%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+}
+.restaurants__cards .card__link {
+  position: unset;
+}
+.restaurants__cards .card__link__img {
+  height: 72%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants__cards .card__link__txt {
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurants__cards .card__link__txt__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.restaurants__cards .card__link__txt__title + p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.restaurants__cards .card__link__txt .fa-heart {
+  color: black;
+  font-weight: 700;
+  font-size: larger;
+}
+.restaurants__cards .card__link__new {
+  z-index: 2;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background-color: #99E2D0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
   display: flex;
   align-items: center;
   justify-content: center;
