@@ -1,0 +1,18 @@
+
+
+* {
+    font-family: 'Roboto';
+}
+
+h1, h2 {
+    font-size: $big-title;
+}
+::placeholder {
+    color: $fourth-color;
+    opacity: 1;
+    font-size: 1rem;
+    font-family: 'Roboto';
+}
+.fa-solid.fa-heart {
+    font-weight: 100;
+}

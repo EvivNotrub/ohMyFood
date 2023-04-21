@@ -8,17 +8,9 @@
 /****ELEMENTS OF HOME/FOOTER THAT CAN BE USED ON OTHER PAGES****/
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
 /****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/
-* {
-  font-family: "Roboto";
-}
-
 body {
   margin: 0;
   font-size: 16px;
-}
-
-h1, h2 {
-  font-size: 1.5rem;
 }
 
 h1, h2, h3, p {
@@ -43,6 +35,14 @@ ul {
 input {
   background-color: inherit;
   border: none;
+}
+
+* {
+  font-family: "Roboto";
+}
+
+h1, h2 {
+  font-size: 1.5rem;
 }
 
 ::placeholder {
@@ -156,6 +156,7 @@ input {
   top: 50%;
   left: 23px;
   transform: translateY(-50%);
+  color: #353535;
 }
 .header__backgrd {
   height: 275px;
@@ -210,6 +211,7 @@ input {
 }
 /****HEADER****/
 .header__form {
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   width: 100%;
   height: 50px;
   background-color: #EAEAEA;
