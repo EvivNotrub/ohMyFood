@@ -26,6 +26,10 @@
     text-align: center;
     align-items: center;
     background-color: $secondary-bg-color;
+    &__description {
+        font-size: $small-title;
+        color: $fourth-color;
+    }
 }
 
 /****GUIDELINES****/
@@ -67,6 +71,11 @@
 }
 
 @media  (min-width: 768px) {
+    .discover {
+        &__title {
+            font-size: $huge-title;
+        }
+    }
     .guidelines {
         > * {
             max-width: 1100px;
