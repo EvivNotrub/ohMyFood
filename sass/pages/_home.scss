@@ -41,10 +41,10 @@
         &__line {
             @include guidelines-boxes;
             &__number {
-                @include guidelines-number;
+                @include circle-number;
+                transform: translate(-50%);
             }
         }
-
     }
 }
 /****RESTAURANTS****/

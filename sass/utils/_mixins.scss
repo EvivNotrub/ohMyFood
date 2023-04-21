@@ -46,7 +46,7 @@
     gap: 23px;
     font-weight: 500;
 }
-@mixin guidelines-number {
+@mixin circle-number {
     height: 24px;
     width: 24px;
     background-color: $bt-color1;
@@ -54,7 +54,6 @@
     text-align: center;
     color: $footer-font-color;
     font-size: 0.875rem;
-    transform: translate(-50%);
     @include flex-r-all-center;
 }
 /****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/

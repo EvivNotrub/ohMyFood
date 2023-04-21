@@ -49,7 +49,7 @@
         height: 22px;
         width: 22px;
         font-size: 22px;
-        transition: all 250ms ease-in-out;
+        transition: all 250ms cubic-bezier(.01,.5,1,.57);
     }
     &__heart:active {
         font-weight: bold;

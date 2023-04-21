@@ -10,7 +10,7 @@ h1, h2 {
     font-size: $big-title;
 }
 h1, h2, h3, p {
-    @extend %no-margin; /**ici c'est plus un test de fonctionnalité**/
+    margin: 0;
 }
 a {
     text-decoration: none;
