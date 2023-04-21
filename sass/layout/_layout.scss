@@ -7,6 +7,17 @@
         &__img {
             @include header-logo;
         }
+        &__link {
+            position: absolute;
+            top: 50%;
+            left: 23px;
+            transform: translateY(-50%);
+        }
+    }
+    &__backgrd {
+        height: 275px;
+        background-size: cover;
+        background-position: center;
     }
 }
 
@@ -31,4 +42,23 @@
 }
 .white-svg {
     @include filter-svg-white;
+}
+@media  (min-width: 768px) {
+    /****Footer****/
+    .footer {
+        font-size: 1.1rem;
+        height: 114px;
+        padding: 35px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
+        align-items: flex-end;
+        &__logo {
+            height: 1.35rem;
+        }
+        &__links {
+            @include flex-r-ai-center;
+            gap: 15px;
+        }
+    }
 }

@@ -42,6 +42,7 @@
         }
     }
     &__heart {
+        cursor: pointer;
         position: absolute;
         @include flex-r-all-center;
         bottom: 8%;
