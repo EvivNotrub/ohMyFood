@@ -211,24 +211,6 @@ h1, h2 {
   font-size: 0.9475rem;
 }
 
-.checkbox {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.checkbox__input {
-  position: absolute;
-  opacity: 0;
-}
-.checkbox__input:checked + label {
-  color: aqua;
-}
-.checkbox__label {
-  cursor: pointer;
-  position: absolute;
-}
-
 .menu {
   height: 100%;
   max-width: 650px;

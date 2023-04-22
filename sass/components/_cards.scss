@@ -72,21 +72,5 @@
             font-weight: 300;
             font-size: $small-txt;
         }
-    }
-    
-}
-.checkbox {
-    position: relative;
-    @include flex-r-all-center;
-    &__input {
-        position: absolute;
-        opacity: 0;
-        &:checked + label{
-            color: aqua;
-        }
-    }
-    &__label {
-        cursor: pointer;
-        position: absolute;
-    }
+    }    
 }
