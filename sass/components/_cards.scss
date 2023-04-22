@@ -83,13 +83,19 @@
         }
     }    
     &__check {
+        position: absolute;
+        right: 0;
         flex-shrink: 0;
-        width: 59px;
+        width: $dish-check-width;
         height: 100%;
         color: $footer-font-color;
         border-radius: 0px 15px 15px 0px;
         background-color: $highlight-color;
-        @include flex-r-all-center;
+        transform-origin: right;
+        transform: scaleX(0.01);
+        transition: all 1000ms ease-in-out;
+        > * {
+            @include center-all-50;
+        }
     }
-
 }

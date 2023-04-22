@@ -3,3 +3,25 @@
 .checkbox-heart {
     @include fancy-check;
 }
+
+.checkbox-dish {
+    position: relative;
+    &__ghost-check {
+        cursor: pointer;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        &:checked {
+            ~ .checked{
+                transform: scaleX(1);
+            }
+            ~ .a .a_b .a_b_c {
+                transform: translateX($dish-check-width*-1);
+            }
+        }
+    }
+
+
+}

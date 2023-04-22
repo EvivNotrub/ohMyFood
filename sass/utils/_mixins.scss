@@ -33,6 +33,12 @@
     flex-direction: column;
     justify-content: center;
 }
+@mixin center-all-50 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 @mixin filter-svg-white {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);
