@@ -15,10 +15,14 @@
             color: $fourth-color;
         }
     }
+    &.menus {
+        max-height: 339px;
+    }
     &__backgrd {
-        height: 275px;
+        height: 325px;
         background-size: cover;
         background-position: center;
+        z-index: -1;
     }
 }
 

@@ -5,7 +5,7 @@
 /*ici gauche et droite != car décalage de 12px du rond rose*/
 /****RESTAURANTS****/
 /****TOOLS****/
-/****ELEMENTS OF HOME/FOOTER THAT CAN BE USED ON OTHER PAGES****/
+/****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
 /****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/
 body {
@@ -34,6 +34,10 @@ ul {
 
 input {
   background-color: inherit;
+  border: none;
+}
+
+button {
   border: none;
 }
 
@@ -118,19 +122,60 @@ h1, h2 {
   justify-content: center;
 }
 .card__heart {
-  cursor: pointer;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 8%;
   right: 33px;
+  cursor: pointer;
   height: 22px;
   width: 22px;
-  font-size: 22px;
+  font-size: 21px;
   transition: all 250ms cubic-bezier(0.01, 0.5, 1, 0.57);
 }
 .card__heart:active {
+  font-weight: bold;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.menu {
+  height: 100%;
+  max-width: 650px;
+  padding: 40px 13px;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: auto;
+}
+.menu__head {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 28px 0 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__head__h1 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+.menu__head__heart {
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  font-size: 21px;
+  transition: all 250ms cubic-bezier(0.01, 0.5, 1, 0.57);
+}
+.menu__head__heart:active {
   font-weight: bold;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
@@ -158,10 +203,14 @@ h1, h2 {
   transform: translateY(-50%);
   color: #353535;
 }
+.header.menus {
+  max-height: 339px;
+}
 .header__backgrd {
-  height: 275px;
+  height: 325px;
   background-size: cover;
   background-position: center;
+  z-index: -1;
 }
 
 /****FOOTER****/

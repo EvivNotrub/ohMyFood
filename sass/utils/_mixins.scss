@@ -23,8 +23,12 @@
     display: flex;
     flex-direction: column;
 }
-
-/****ELEMENTS OF HOME/FOOTER THAT CAN BE USED ON OTHER PAGES****/
+@mixin flex-clm-ai-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 @mixin filter-svg-white {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);
 }
@@ -35,6 +39,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+@mixin heart-properties {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    font-size: 21px;
+    transition: all 250ms cubic-bezier(.01,.5,1,.57);
+    &:active {
+        font-weight: bold;
+        background: $linear-gradient;
+        background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+    }
 }
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
 @mixin guidelines-boxes {

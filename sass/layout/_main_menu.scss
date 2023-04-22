@@ -1,0 +1,26 @@
+
+.menu {
+    height: 100%;
+    max-width: 650px;
+    padding: 40px 13px;
+    background-color: #F6F6F6;
+    border-radius: 40px 40px 0px 0px;
+    @include flex-clm-ai-center;
+    gap: 40px;
+    margin: auto;
+    &__head {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 28px 0 4px;
+        @include flex-r-ai-center;
+        justify-content: space-between;
+        &__h1 {
+            font-family: 'Shrikhand';
+            font-weight: 400;
+            font-size: $bigger-title;
+        }
+        &__heart {
+            @include heart-properties;
+        }
+    }
+}

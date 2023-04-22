@@ -42,21 +42,10 @@
         }
     }
     &__heart {
-        cursor: pointer;
         position: absolute;
         @include flex-r-all-center;
         bottom: 8%;
         right: 33px;
-        height: 22px;
-        width: 22px;
-        font-size: 22px;
-        transition: all 250ms cubic-bezier(.01,.5,1,.57);
-    }
-    &__heart:active {
-        font-weight: bold;
-        background: $linear-gradient;
-        background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
+        @include heart-properties;
     }
 }
