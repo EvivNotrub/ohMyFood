@@ -193,6 +193,33 @@ h1, h2 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+.menu__sect {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__sect__h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.menu__sect__h2:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu__sect__dishes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__sect__dishes button {
+  width: 100%;
+}
 
 /****HEADER****/
 .header__div-logo {

@@ -23,4 +23,29 @@
             @include heart-properties;
         }
     }
+    &__sect {
+        box-sizing: border-box;
+        width: 100%;
+        @include flex-clm;
+        gap: 12px;
+        &__h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1rem;
+            &:after {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 5px;
+                border-bottom: 3px solid $highlight-color;
+            }
+        }
+        &__dishes {
+            @include flex-clm;
+            gap: 12px;
+            button {
+                width: 100%;
+            }
+        }
+    }
 }
