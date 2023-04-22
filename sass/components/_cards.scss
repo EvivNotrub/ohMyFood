@@ -41,19 +41,10 @@
             @include flex-r-all-center;
         }
     }
-    &__heart {
-        position: absolute;
-        @include flex-r-all-center;
-        bottom: 8%;
-        right: 33px;
-        @include heart-properties;
-    }
-    .checkbox {
+    .checkbox-heart {
         position: absolute;
         bottom: 8%;
         right: 33px;
-        @include flex-r-all-center;
-        @include fancy-check ;
     }
 }
 

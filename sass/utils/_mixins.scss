@@ -63,6 +63,7 @@
     }
 }
 @mixin fancy-check {
+    position: relative;
     height: 22px;
     width: 22px;
     font-size: 21px;
