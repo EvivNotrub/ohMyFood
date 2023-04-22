@@ -186,7 +186,6 @@ h1, h2 {
   box-sizing: border-box;
   width: 100%;
   height: 69px;
-  padding: 12px 15px;
   text-align: start;
   display: flex;
   flex-direction: row;
@@ -196,19 +195,42 @@ h1, h2 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-.dish-card__txt {
+.dish-card__info {
+  padding: 12px 15px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
 }
-.dish-card__txt h3 {
+.dish-card__info h3 {
   font-weight: 500;
   font-size: 1.125rem;
 }
-.dish-card__txt p {
+.dish-card__info__txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.dish-card__info__txt__p {
   font-weight: 300;
   font-size: 0.9475rem;
+}
+.dish-card__info__txt__price {
+  font-weight: 700;
+  font-size: 0.9475rem;
+}
+.dish-card__check {
+  flex-shrink: 0;
+  width: 59px;
+  height: 100%;
+  color: #FFFFFF;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu {
