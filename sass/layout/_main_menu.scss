@@ -43,9 +43,6 @@
         &__dishes {
             @include flex-clm;
             gap: 12px;
-            button {
-                width: 100%;
-            }
         }
     }
 }
