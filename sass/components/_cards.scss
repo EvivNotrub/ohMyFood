@@ -62,4 +62,16 @@
     background-color: $main-bg-color;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    &__txt {
+        @include flex-clm-jc-center;
+        gap: 5px;
+        h3 {
+            font-weight: 500;
+            font-size: $small-title;
+        }
+        p {
+            font-weight: 300;
+            font-size: $small-txt;
+        }
+    }
 }
