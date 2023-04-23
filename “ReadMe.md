@@ -7,3 +7,12 @@ arrow: <i class="fa-sharp fa-solid fa-arrow-left" style="color: #000000;"></i>
 cutlery: <i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
 hand-shake: <i class="fa-light fa-handshake-angle" style="color: #000000;"></i>
 location: <i class="fa-solid fa-location-dot" style="color: #353535"></i>
+
+Git/GitHub versions:
+° There are 3 options for the layout of the dish-cards in checkbox :
+    -> two of which are in the branch menuCheckboxs in the ".\restaurants\la_palette_du_gout.html" file
+    in the two first dishes only
+    -> third and chosen option is in the branch menuCheckboxsBis
+° pink-heart : first option was a link before finding out about the checkbox option
+    -> can be seen under the branch save
+
