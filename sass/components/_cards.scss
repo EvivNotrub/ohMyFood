@@ -109,17 +109,27 @@
     background-color: $main-bg-color;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    p {
+        font-size: $small-txt;
+    }
     &__info {
         padding: 12px 15px;
         width: 100%;
         @include flex-clm;
         justify-content: flex-end;
         gap: 5px;
+        &__title {
+            font-weight: 500;
+            font-size: $small-title;        }
+        &__txt {
+            font-weight: 300;
+        }
     }
     &__price {
         padding: 12px 15px;
         @include flex-clm;
         justify-content: flex-end;
+        font-weight:700;
     }
     &__check {
         position: absolute;
