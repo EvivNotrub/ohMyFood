@@ -276,6 +276,9 @@ h1, h2 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
+.ditsh-card p {
+  font-size: 0.9475rem;
+}
 .ditsh-card__info {
   padding: 12px 15px;
   width: 100%;
@@ -284,11 +287,19 @@ h1, h2 {
   justify-content: flex-end;
   gap: 5px;
 }
+.ditsh-card__info__title {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.ditsh-card__info__txt {
+  font-weight: 300;
+}
 .ditsh-card__price {
   padding: 12px 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  font-weight: 700;
 }
 .ditsh-card__check {
   position: absolute;
