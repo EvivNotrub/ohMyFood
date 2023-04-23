@@ -14,10 +14,14 @@
         height: 100%;
         opacity: 0.5;
         &:checked {
-            ~ .checked{
+            ~ .checked {
+                opacity: 1;
                 transform: scaleX(1);
             }
-            ~ .a .a_b .a_b_c {
+            ~ .affected .affected__el {
+                transform: translateX($dish-check-width*-1);
+            }
+            ~ .ditchAffected  {
                 transform: translateX($dish-check-width*-1);
             }
         }

@@ -141,9 +141,13 @@ h1, h2 {
   opacity: 0.5;
 }
 .checkbox-dish__ghost-check:checked ~ .checked {
+  opacity: 1;
   transform: scaleX(1);
 }
-.checkbox-dish__ghost-check:checked ~ .a .a_b .a_b_c {
+.checkbox-dish__ghost-check:checked ~ .affected .affected__el {
+  transform: translateX(-59px);
+}
+.checkbox-dish__ghost-check:checked ~ .ditchAffected {
   transform: translateX(-59px);
 }
 
@@ -166,7 +170,7 @@ h1, h2 {
   border-radius: 15px 15px 0 0;
 }
 .card__link__txt {
-  padding: 13px;
+  padding: 8px 13px 13px 13px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -195,7 +199,7 @@ h1, h2 {
 }
 .card .checkbox-heart {
   position: absolute;
-  bottom: 8%;
+  bottom: 8.5%;
   right: 33px;
 }
 
@@ -250,9 +254,57 @@ h1, h2 {
   background-color: #99E2D0;
   transform-origin: right;
   transform: scaleX(0.01);
-  transition: all 1000ms ease-in-out;
+  opacity: 0;
+  transition: transform 1000ms ease-in-out;
 }
 .dish-card__check > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ditsh-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 69px;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.ditsh-card__info {
+  padding: 12px 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.ditsh-card__price {
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.ditsh-card__check {
+  position: absolute;
+  right: 0;
+  flex-shrink: 0;
+  width: 59px;
+  height: 100%;
+  color: #FFFFFF;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
+  transform-origin: right;
+  transform: scaleX(0.01);
+  opacity: 0;
+  transition: transform 1000ms ease-in-out;
+}
+.ditsh-card__check > * {
   position: absolute;
   top: 50%;
   left: 50%;

@@ -3,6 +3,10 @@
     width: 100%;
     object-fit: cover;
 }
+@mixin flex-r {
+    display: flex;
+    flex-direction: row;
+}
 @mixin flex-r-jc-center {
     display: flex;
     flex-direction: row;
