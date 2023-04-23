@@ -14,15 +14,16 @@
     $small-title: 1.125rem;
     $small-txt: 0.9475rem;
 
-
+/************menus*********/
     $dish-check-width: 59px;
+
 /**********HOME**********/
-/****DISCOVER****/
-$discover-bx-paddg: 40px 30px;
+    /****DISCOVER****/
+    $discover-bx-paddg: 40px 30px;
 
-/****GUIDELINES****/
-$guidelines-bx-paddg: 23px 20px 68px 32px; /*ici gauche et droite != car décalage de 12px du rond rose*/
+    /****GUIDELINES****/
+    $guidelines-bx-paddg: 23px 20px 68px 32px; /*ici gauche et droite != car décalage de 12px du rond rose*/
 
-/****RESTAURANTS****/
-$restrt-bx-paddg: 50px 15px;
-$restrt-bx-paddg-768up: 30px 20px;
+    /****RESTAURANTS****/
+    $restrt-bx-paddg: 50px 15px;
+    $restrt-bx-paddg-768up: 30px 20px;
