@@ -11,9 +11,9 @@
     @include flex-r-all-center;
     position: relative;
     z-index: 1;
-    transition: opacity 0.20s ease-in-out;
+    transition: opacity 0.20s cubic-bezier(.71,.05,.25,.87);
     &:hover {
-        opacity: 0.85;
+        opacity: 0.835;
         &::after {
             opacity: 1;
         }
@@ -25,16 +25,16 @@
         @include pseudo-elmt-full-size;
         border-radius: 25px;
         z-index: -1;
-        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.30);
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.37);
         opacity: 1;
-        transition: opacity 0.15s ease-out;
+        transition: opacity 0.2s ease-in-out 0.05s;
     }
     &::after {
         @include pseudo-elmt-full-size;
         border-radius: 25px;
-        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.45);
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.57);
         opacity: 0;
         z-index: -1;
-        transition: opacity 0.25s ease-in-out;
+        transition: opacity 0.25s ease-out 0.10s;
     }
 }
