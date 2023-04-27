@@ -9,6 +9,18 @@
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
 /****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/
+/***old versions***/
+/**for pink-gradient-button**/
+@keyframes shake-it {
+  from {
+    transform: translate(0%, 0%);
+    animation-timing-function: cubic-bezier(0.56, 0.05, 0.49, 0.6);
+  }
+  to {
+    transform: translate(0.3%, 1.2%);
+    animation-timing-function: cubic-bezier(0.4, 0.56, 1, 0.57);
+  }
+}
 body {
   margin: 0;
   font-size: 16px;
@@ -69,17 +81,50 @@ h1, h2 {
   font-weight: 500;
   padding: 0.81rem 1rem;
   border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s ease-in-out;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.2s cubic-bezier(0.71, 0.05, 0.25, 0.87) 0.05s;
 }
 .pink-gradt-button:hover {
-  opacity: 0.85;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+  opacity: 0.835;
+  animation: shake-it 0.05s alternate 4;
+}
+.pink-gradt-button:hover::after {
+  opacity: 1;
+}
+.pink-gradt-button:hover::before {
+  opacity: 0;
+}
+.pink-gradt-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 25px;
+  z-index: -1;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.37);
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out 0.05s;
+}
+.pink-gradt-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 25px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.57);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.25s ease-out 0.1s;
 }
 
 .checkbox-heart {
@@ -116,7 +161,7 @@ h1, h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

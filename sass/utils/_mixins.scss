@@ -22,7 +22,6 @@
     align-items: center;
     justify-content: center;
 }
-
 @mixin flex-clm {
     display: flex;
     flex-direction: column;
@@ -43,6 +42,14 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+@mixin pseudo-elmt-full-size {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 @mixin filter-svg-white {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);
@@ -50,28 +57,9 @@
 @mixin header-logo {
     width: 10rem;
     height: 2.1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    @include center-all-50;
 }
-@mixin heart-properties {
-    cursor: pointer;
-    height: 22px;
-    width: 22px;
-    font-size: 21px;
-    transition: all 150ms cubic-bezier(.01,.5,1,.57);
-    &:hover:not(:active) {
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65) ;
-    }
-    &:active {
-        font-weight: bold;
-        background: $linear-gradient;
-        background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-    }
-}
+
 @mixin fancy-check {
     position: relative;
     height: 22px;
@@ -145,3 +133,21 @@
 }
 /****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/
 
+/***old versions***/
+@mixin heart-properties {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    font-size: 21px;
+    transition: all 150ms cubic-bezier(.01,.5,1,.57);
+    &:hover:not(:active) {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65) ;
+    }
+    &:active {
+        font-weight: bold;
+        background: $linear-gradient;
+        background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+    }
+}
