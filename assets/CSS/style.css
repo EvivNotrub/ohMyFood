@@ -70,7 +70,7 @@ h1, h2 {
   font-weight: 500;
   padding: 0.81rem 1rem;
   border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -149,7 +149,7 @@ h1, h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

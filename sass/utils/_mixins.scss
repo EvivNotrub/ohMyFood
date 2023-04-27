@@ -22,7 +22,6 @@
     align-items: center;
     justify-content: center;
 }
-
 @mixin flex-clm {
     display: flex;
     flex-direction: column;
@@ -58,10 +57,7 @@
 @mixin header-logo {
     width: 10rem;
     height: 2.1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    @include center-all-50;
 }
 
 @mixin fancy-check {
