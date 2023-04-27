@@ -11,9 +11,10 @@
     @include flex-r-all-center;
     position: relative;
     z-index: 1;
-    transition: opacity 0.20s cubic-bezier(.71,.05,.25,.87);
+    transition: opacity 0.20s cubic-bezier(.71,.05,.25,.87) 0.05s;
     &:hover {
         opacity: 0.835;
+        animation: shake-it 0.05s alternate 4;
         &::after {
             opacity: 1;
         }
