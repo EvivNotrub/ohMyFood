@@ -1,5 +1,8 @@
-/*adds a "ghost" input in order to make the container
-clickable with some custom content*/
+
+
+/*adds a "ghost" input type checkbox with position absolute
+ and opacity=0 in order to make the container clickable
+ with some custom content*/
 
 .checkbox-heart {
     @include fancy-check;
@@ -14,7 +17,7 @@ clickable with some custom content*/
         width: 100%;
         height: 100%;
         opacity: 0;
-        z-index: 3;
+        z-index: 3;        
         &:checked {
             ~ .checked {
                 opacity: 1;
@@ -29,11 +32,11 @@ clickable with some custom content*/
                 }
             }
         }
+        /*In order to avoid text overlapping when unchecked*/                    
         &:not(:checked) {
             ~ .dish-card  {
                 &__price {
                     animation: subterfuge 0.20s ease-in both;
-            /*In order to avoid text overlapping when unchecked*/                    
                 }
             }
         }

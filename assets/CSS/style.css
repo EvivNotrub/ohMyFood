@@ -135,8 +135,9 @@ h1, h2 {
   transition: opacity 0.25s ease-out 0.1s;
 }
 
-/*adds a "ghost" input in order to make the container
-clickable with some custom content*/
+/*adds a "ghost" input type checkbox with position absolute
+ and opacity=0 in order to make the container clickable
+ with some custom content*/
 .checkbox-heart {
   position: relative;
   height: 22px;
@@ -196,6 +197,7 @@ clickable with some custom content*/
   height: 100%;
   opacity: 0;
   z-index: 3;
+  /*In order to avoid text overlapping when unchecked*/
 }
 .checkbox-dish__ghost-check:checked ~ .checked {
   opacity: 1;
@@ -205,11 +207,10 @@ clickable with some custom content*/
   transform: translateX(-59px);
 }
 .checkbox-dish__ghost-check:checked ~ .dish-card__details > span {
-  width: calc(100% - 67px);
+  width: calc(100% - 74px);
 }
 .checkbox-dish__ghost-check:not(:checked) ~ .dish-card__price {
   animation: subterfuge 0.2s ease-in both;
-  /*In order to avoid text overlapping when unchecked*/
 }
 
 /****restaurant cards****/
@@ -265,6 +266,8 @@ clickable with some custom content*/
 }
 
 /****menu cards****/
+/*a simplified HTML layout means less specific selectors 
+but unfortunatly also a more complicated css*/
 .dish-card {
   box-sizing: border-box;
   width: 100%;
@@ -274,10 +277,19 @@ clickable with some custom content*/
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   align-content: space-evenly;
   background-color: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  overflow: hidden;
+}
+.dish-card__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*is needed to ensure that the price
+  and text alignment stays right given the extra span */
 }
 .dish-card__details > span {
   display: inline-block;
@@ -285,7 +297,7 @@ clickable with some custom content*/
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: calc(100% - 8px);
+  width: calc(100% - 15px);
 }
 .dish-card__h3 {
   width: 90%;
