@@ -191,8 +191,11 @@ h1, h2 {
   opacity: 1;
   transform: scaleX(1);
 }
-.checkbox-dish__ghost-check:checked ~ .check-affected {
+.checkbox-dish__ghost-check:checked ~ .dish-card__price {
   transform: translateX(-59px);
+}
+.checkbox-dish__ghost-check:checked ~ .dish-card__details > span {
+  width: calc(100% - 64px);
 }
 
 /****restaurant cards****/
@@ -262,10 +265,17 @@ h1, h2 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
+.dish-card__details > span {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 5px);
+}
 .dish-card__h3 {
-  z-index: 2;
+  width: 90%;
   padding-left: 15px;
-  width: 100%;
   font-weight: 500;
   font-size: 1.125rem;
 }
@@ -273,14 +283,16 @@ h1, h2 {
   font-size: 0.9475rem;
 }
 .dish-card__txt {
-  width: 63%;
   padding-left: 15px;
   font-weight: 300;
+  width: 75%;
 }
 .dish-card__price {
-  z-index: 1;
+  box-sizing: border-box;
   padding-right: 15px;
   font-weight: 700;
+  width: 41px;
+  text-align: end;
 }
 .dish-card__check {
   position: absolute;

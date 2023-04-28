@@ -19,8 +19,13 @@
                 opacity: 1;
                 transform: scaleX(1);
             }
-            ~ .check-affected  {
+            ~ .dish-card  {
+                &__price {
                 transform: translateX($dish-check-width*-1);
+                }
+                &__details > span {
+                    width: calc(100% - ($dish-check-width + $spacing-width));
+                }
             }
         }
     }
