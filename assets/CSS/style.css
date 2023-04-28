@@ -319,7 +319,7 @@ but unfortunatly also a more complicated css*/
   font-weight: 700;
   width: 41px;
   text-align: end;
-  transition: transform 0.16s cubic-bezier(0.55, 0.01, 0.64, 1.44) 0.025s;
+  transition: transform 0.16s cubic-bezier(0.55, 0.01, 0.71, 1.57) 0.025s;
 }
 .dish-card__check {
   position: absolute;
