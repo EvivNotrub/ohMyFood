@@ -44,13 +44,17 @@
     }
 }
 @for $i from 1 through 4 {
+    $overlap: 20;
+    $shift: 70%;
+    $X: (($i)-1)*(($shift)-($overlap));
+    $Y: (($i)-1)*(($shift/10)-($overlap));
     @keyframes loader-img-anim#{$i} {
         from {
-            transform: translate(-200%, -70%) scale(0.5, 0.5);
+            transform: translate(-100%, -70%) scale(0.5, 0.5);
             opacity: 0;
         }
         to {
-            transform: translate((1/$i)*100%, 10%*$i) scale(1.1, 1.1);
+            transform: translate( $X, $Y) scale(1.1, 1.1);
             opacity: 1;
         }
     }
