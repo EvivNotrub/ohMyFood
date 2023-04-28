@@ -1,4 +1,5 @@
-
+/*adds a "ghost" input in order to make the container
+clickable with some custom content*/
 
 .checkbox-heart {
     @include fancy-check;
@@ -17,14 +18,22 @@
         &:checked {
             ~ .checked {
                 opacity: 1;
-                transform: scaleX(1);
+                transform: scale(1, 1);
             }
             ~ .dish-card  {
                 &__price {
                 transform: translateX($dish-check-width*-1);
                 }
                 &__details > span {
-                    width: calc(100% - ($dish-check-width + $spacing-width));
+                    width: calc(100% - ($dish-check-width + $dish-spacing-width));
+                }
+            }
+        }
+        &:not(:checked) {
+            ~ .dish-card  {
+                &__price {
+                    animation: subterfuge 0.20s ease-in both;
+            /*In order to avoid text overlapping when unchecked*/                    
                 }
             }
         }

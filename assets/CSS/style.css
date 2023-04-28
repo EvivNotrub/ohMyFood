@@ -21,6 +21,14 @@
     animation-timing-function: cubic-bezier(0.4, 0.56, 1, 0.57);
   }
 }
+@keyframes subterfuge {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   font-size: 16px;
@@ -127,6 +135,8 @@ h1, h2 {
   transition: opacity 0.25s ease-out 0.1s;
 }
 
+/*adds a "ghost" input in order to make the container
+clickable with some custom content*/
 .checkbox-heart {
   position: relative;
   height: 22px;
@@ -189,13 +199,17 @@ h1, h2 {
 }
 .checkbox-dish__ghost-check:checked ~ .checked {
   opacity: 1;
-  transform: scaleX(1);
+  transform: scale(1, 1);
 }
 .checkbox-dish__ghost-check:checked ~ .dish-card__price {
   transform: translateX(-59px);
 }
 .checkbox-dish__ghost-check:checked ~ .dish-card__details > span {
-  width: calc(100% - 64px);
+  width: calc(100% - 67px);
+}
+.checkbox-dish__ghost-check:not(:checked) ~ .dish-card__price {
+  animation: subterfuge 0.2s ease-in both;
+  /*In order to avoid text overlapping when unchecked*/
 }
 
 /****restaurant cards****/
@@ -271,7 +285,7 @@ h1, h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: calc(100% - 5px);
+  width: calc(100% - 8px);
 }
 .dish-card__h3 {
   width: 90%;
@@ -293,6 +307,7 @@ h1, h2 {
   font-weight: 700;
   width: 41px;
   text-align: end;
+  transition: transform 0.16s cubic-bezier(0.55, 0.01, 0.64, 1.44) 0.025s;
 }
 .dish-card__check {
   position: absolute;
@@ -304,9 +319,9 @@ h1, h2 {
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   transform-origin: right;
-  transform: scaleX(0.01);
+  transform: scale(0, 0.5);
   opacity: 0;
-  transition: transform 1000ms ease-in-out;
+  transition: transform 0.16s cubic-bezier(0.67, -0.01, 0.71, 1.46);
 }
 .dish-card__check > * {
   position: absolute;

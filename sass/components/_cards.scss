@@ -49,9 +49,7 @@
 }
 
 /****menu cards****/
-$spacing-width: 5px;
-$dish-price-width: 41px;
-$dish-txt-width: calc(100% - ($dish-price-width + $dish-check-width + 10px));
+
 .dish-card {
     box-sizing: border-box;
     width: 100%;
@@ -70,7 +68,7 @@ $dish-txt-width: calc(100% - ($dish-price-width + $dish-check-width + 10px));
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: calc(100% - ($spacing-width));
+        width: calc(100% - ($dish-spacing-width));
         }
     }
     &__h3 {
@@ -93,6 +91,7 @@ $dish-txt-width: calc(100% - ($dish-price-width + $dish-check-width + 10px));
         font-weight:700;
         width: $dish-price-width;
         text-align: end;
+        transition: transform 0.16s cubic-bezier(.55,.01,.64,1.44) 0.025s;
     }   
     &__check {
         position: absolute;
@@ -104,9 +103,9 @@ $dish-txt-width: calc(100% - ($dish-price-width + $dish-check-width + 10px));
         border-radius: 0px 15px 15px 0px;
         background-color: $highlight-color;
         transform-origin: right;
-        transform: scaleX(0.01);
+        transform: scale(0, 0.5);
         opacity: 0;
-        transition: transform 1000ms ease-in-out;
+        transition: transform 0.16s cubic-bezier(.67,-0.01,.71,1.46);
         > * {
             @include center-all-50;
         }
