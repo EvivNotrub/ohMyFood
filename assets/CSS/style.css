@@ -21,6 +21,14 @@
     animation-timing-function: cubic-bezier(0.4, 0.56, 1, 0.57);
   }
 }
+@keyframes subterfuge {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   font-size: 16px;
@@ -127,6 +135,9 @@ h1, h2 {
   transition: opacity 0.25s ease-out 0.1s;
 }
 
+/*adds a "ghost" input type checkbox with position absolute
+ and opacity=0 in order to make the container clickable
+ with some custom content*/
 .checkbox-heart {
   position: relative;
   height: 22px;
@@ -186,13 +197,20 @@ h1, h2 {
   height: 100%;
   opacity: 0;
   z-index: 3;
+  /*In order to avoid text overlapping when unchecked*/
 }
 .checkbox-dish__ghost-check:checked ~ .checked {
   opacity: 1;
-  transform: scaleX(1);
+  transform: scale(1, 1);
 }
-.checkbox-dish__ghost-check:checked ~ .check-affected {
+.checkbox-dish__ghost-check:checked ~ .dish-card__price {
   transform: translateX(-59px);
+}
+.checkbox-dish__ghost-check:checked ~ .dish-card__details > span {
+  width: calc(100% - 74px);
+}
+.checkbox-dish__ghost-check:not(:checked) ~ .dish-card__price {
+  animation: subterfuge 0.2s ease-in both;
 }
 
 /****restaurant cards****/
@@ -248,6 +266,8 @@ h1, h2 {
 }
 
 /****menu cards****/
+/*a simplified HTML layout means less specific selectors 
+but unfortunatly also a more complicated css*/
 .dish-card {
   box-sizing: border-box;
   width: 100%;
@@ -257,15 +277,31 @@ h1, h2 {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   align-content: space-evenly;
   background-color: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  overflow: hidden;
+}
+.dish-card__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*is needed to ensure that the price
+  and text alignment stays right given the extra span */
+}
+.dish-card__details > span {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 15px);
 }
 .dish-card__h3 {
-  z-index: 2;
+  width: 90%;
   padding-left: 15px;
-  width: 100%;
   font-weight: 500;
   font-size: 1.125rem;
 }
@@ -273,14 +309,17 @@ h1, h2 {
   font-size: 0.9475rem;
 }
 .dish-card__txt {
-  width: 63%;
   padding-left: 15px;
   font-weight: 300;
+  width: 75%;
 }
 .dish-card__price {
-  z-index: 1;
+  box-sizing: border-box;
   padding-right: 15px;
   font-weight: 700;
+  width: 41px;
+  text-align: end;
+  transition: transform 0.16s cubic-bezier(0.55, 0.01, 0.71, 1.57) 0.025s;
 }
 .dish-card__check {
   position: absolute;
@@ -292,9 +331,9 @@ h1, h2 {
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   transform-origin: right;
-  transform: scaleX(0.01);
+  transform: scale(0, 0.5);
   opacity: 0;
-  transition: transform 1000ms ease-in-out;
+  transition: transform 0.16s cubic-bezier(0.67, -0.01, 0.71, 1.46);
 }
 .dish-card__check > * {
   position: absolute;

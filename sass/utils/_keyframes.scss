@@ -10,3 +10,11 @@
         animation-timing-function: cubic-bezier(.4,.56,1,.57);
     }
 }
+@keyframes subterfuge {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -49,7 +49,8 @@
 }
 
 /****menu cards****/
-
+/*a simplified HTML layout means less specific selectors 
+but unfortunatly also a more complicated css*/
 .dish-card {
     box-sizing: border-box;
     width: 100%;
@@ -57,14 +58,27 @@
     @include flex-r-ai-center;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     align-content: space-evenly;
     background-color: $main-bg-color;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    overflow: hidden;    
+    &__details {
+        @include flex-clm-jc-center; /*is needed to ensure that the price
+                and text alignment stays right given the extra span */
+        > span {
+        display: inline-block;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: calc(100% - ($dish-spacing-width));
+        }
+    }
     &__h3 {
-        z-index: 2;
+        width: 90%;
         padding-left: 15px;
-        width: 100%;
         font-weight: 500;
         font-size: $small-title;
     }
@@ -72,14 +86,17 @@
         font-size: $small-txt;
     }       
     &__txt {
-        width: 63%;
         padding-left: 15px;
         font-weight: 300;
+        width: 75%;
     }
     &__price {
-        z-index: 1;
+        box-sizing: border-box;
         padding-right: 15px;
         font-weight:700;
+        width: $dish-price-width;
+        text-align: end;
+        transition: transform 0.16s cubic-bezier(.55,.01,.71,1.57) 0.025s;
     }   
     &__check {
         position: absolute;
@@ -91,9 +108,9 @@
         border-radius: 0px 15px 15px 0px;
         background-color: $highlight-color;
         transform-origin: right;
-        transform: scaleX(0.01);
+        transform: scale(0, 0.5);
         opacity: 0;
-        transition: transform 1000ms ease-in-out;
+        transition: transform 0.16s cubic-bezier(.67,-0.01,.71,1.46);
         > * {
             @include center-all-50;
         }
