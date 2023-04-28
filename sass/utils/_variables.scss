@@ -1,14 +1,19 @@
+
+/**COLORS**/
     $main-bg-color: #ffffff;
     $secondary-bg-color: #F7F7F7;
     $third-bg-color: #EAEAEA;
     $fourth-color: #353535;
     $footer-font-color: #FFFFFF;
     $bt-color1: #9356DC;
-    $bt-color2: #FF79DA;
+    $bt-color2: #FF79DA;    
     $linear-gradient-figma: linear-gradient(193.33deg, $bt-color1 -11.44%, $bt-color2 123.93%);
     $linear-gradient: linear-gradient(0deg, $bt-color1 -11.44%, $bt-color2 123.93%);
     $highlight-color: #99E2D0;
     $highlight-txt-color: #008766;
+    
+/**font sizes*/
+    $loader-size: 5rem;
     $huge-title: 2.5rem;
     $bigger-title: 1.75rem;
     $big-title: 1.5rem;
@@ -21,6 +26,17 @@
     $dish-price-width: 41px;
     $dish-txt-widths: calc(100% - ($dish-price-width + $dish-check-width + 10px));
 /**********HOME**********/
+
+    /****LOADER****/
+    
+
+    $logo-anim-duration: 0.35s;
+    $letter-anim-delay: $logo-anim-duration/5;
+    $total-loader-duration: $logo-anim-duration + 4;
+
+    $alpha-adjust: 0.15;
+    $loader-color1: adjust-color($bt-color1, $alpha: $alpha-adjust*-1);
+    $loader-color2: adjust-color($bt-color2, $alpha: $alpha-adjust*-1);
     /****DISCOVER****/
     $discover-bx-paddg: 40px 30px;
 
