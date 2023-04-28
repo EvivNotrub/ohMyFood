@@ -57,6 +57,46 @@
     opacity: 0;
   }
 }
+@keyframes loader-img-anim1 {
+  from {
+    transform: translate(-200%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(100%, 10%) scale(1.1, 1.1);
+    opacity: 1;
+  }
+}
+@keyframes loader-img-anim2 {
+  from {
+    transform: translate(-200%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(50%, 20%) scale(1.1, 1.1);
+    opacity: 1;
+  }
+}
+@keyframes loader-img-anim3 {
+  from {
+    transform: translate(-200%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(33.3333333333%, 30%) scale(1.1, 1.1);
+    opacity: 1;
+  }
+}
+@keyframes loader-img-anim4 {
+  from {
+    transform: translate(-200%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(25%, 40%) scale(1.1, 1.1);
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   font-size: 16px;
@@ -509,10 +549,10 @@ but unfortunatly also a more complicated css*/
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  animation: loader-fade-out both 4.35s cubic-bezier(1, 0, 0.8, 0.79);
+  animation: loader-fade-out both 4.05s cubic-bezier(1, 0, 0.8, 0.79);
 }
 .loader__logo {
-  padding: 50px;
+  padding: 50px 50px 0 50px;
   transform-origin: top right;
   background: radial-gradient(circle, rgba(147, 86, 220, 0.85) -11.44%, rgba(255, 121, 218, 0.85) 123.93%);
   -webkit-background-clip: text;
@@ -548,8 +588,40 @@ but unfortunatly also a more complicated css*/
 .loader__logo .letter--8 {
   animation-delay: 0.56s;
 }
+.loader__img {
+  width: 80vw;
+  height: 60vh;
+  position: relative;
+}
+.loader__img .restaurant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+}
+.loader__img .restaurant--1 {
+  animation: loader-img-anim1 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 0.1s;
+}
+.loader__img .restaurant--2 {
+  animation: loader-img-anim2 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 0.2s;
+}
+.loader__img .restaurant--3 {
+  animation: loader-img-anim3 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 0.3s;
+}
+.loader__img .restaurant--4 {
+  animation: loader-img-anim4 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 0.4s;
+}
 .loader__counter {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

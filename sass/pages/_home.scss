@@ -15,9 +15,9 @@
     z-index: 500;
     @include flex-clm-ai-center;
     justify-content: space-between;
-    animation: loader-fade-out both $total-loader-duration cubic-bezier(1,0,.8,.79) ;	
+    animation: loader-fade-out both $loader-duration cubic-bezier(1,0,.8,.79) ;	
     &__logo {
-        padding: 50px;
+        padding: 50px 50px 0 50px;
         transform-origin: top right;
         background: radial-gradient(circle, $loader-color1 -11.44%, $loader-color2 123.93%);
         -webkit-background-clip: text;
@@ -34,8 +34,30 @@
             }
         }        
     }
+    &__img {
+        width: 80vw;
+        height: 60vh;
+        position: relative;
+        .restaurant {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            @for $i from 1 through 4 {
+                &--#{$i} {
+                    animation: loader-img-anim#{$i} $img-anim-duration cubic-bezier(.49,.5,.51,1.34) both;
+                    animation-delay: $img-anim-delay * $i;
+                }                
+            }
+        }
+    }
     &__counter {
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         @include flex-r-all-center;
         font-family: 'Shrikhand';
         font-size: $big-title;

@@ -43,3 +43,15 @@
         opacity: 0;
     }
 }
+@for $i from 1 through 4 {
+    @keyframes loader-img-anim#{$i} {
+        from {
+            transform: translate(-200%, -70%) scale(0.5, 0.5);
+            opacity: 0;
+        }
+        to {
+            transform: translate((1/$i)*100%, 10%*$i) scale(1.1, 1.1);
+            opacity: 1;
+        }
+    }
+}
