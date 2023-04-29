@@ -39,17 +39,18 @@
     }
     70% {
         opacity: 1;
-    }
+        }
     to {
         opacity: 0;
+        animation-timing-function: cubic-bezier(.57,.43,.38,1.06) ;
     }
 }
-    /*********IMAGES LOADER********/
+/************IMAGES LOADER***********/
 @for $i from 1 through 4 {
     $overlap: 20;
     $shift: 70%;
     $X: ($i - 1)*($shift - $overlap);
-    $Y: ($i - 1)*(calc($shift/10) - $overlap);
+    $Y: ($i - 1)*(calc($shift/25) - $overlap);
     @keyframes loader-img-anim#{$i} {
         from {
             transform: translate(-100%, -70%) scale(0.5, 0.5);
@@ -60,4 +61,12 @@
             opacity: 1;
         }
     }
+}
+@keyframes disappear {
+    from {
+        transform: scale(1,1);
+    }
+    to {
+        transform: scale(0,0) translate(500%, 500%);
+    }	
 }
