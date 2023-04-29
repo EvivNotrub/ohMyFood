@@ -25,11 +25,10 @@
         color: transparent;
         -webkit-text-fill-color: transparent;
         .letter {
-            will-change: transform, opacity;
             display: inline-block;
             font-family: 'Shrikhand', cursive;
             font-size: $loader-size;
-            animation: loader-down-twist $logo-anim-duration cubic-bezier(.49,.5,.51,1.34) both;        
+            animation: loader-down-twist $logo-anim-duration cubic-bezier(.49,.5,.51,1.34) backwards;        
             @for $i from 1 through 8 {
                 &--#{$i} {
                     animation-delay: calc(($letter-anim-delay * $i) + $logo-anim-delay);
