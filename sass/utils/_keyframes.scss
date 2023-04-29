@@ -18,6 +18,14 @@
         opacity: 1;
     }
 }
+@keyframes transX {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 @keyframes loader-down-twist {
     from {
         transform:  translate(100%, -150%) rotate(30deg) scale(0.6,1.3);
@@ -70,3 +78,33 @@
         transform: scale(0,0) translate(500%, 500%);
     }	
 }
+
+@-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes descent {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+  }
