@@ -15,9 +15,9 @@
     z-index: 500;
     @include flex-clm-ai-center;
     justify-content: space-between;
-    animation: loader-fade-out both $loader-duration cubic-bezier(1,0,.8,.79) ;	
+    animation: loader-fade-out $loader-duration cubic-bezier(1,0,.8,.79) both;	
     &__logo {
-        padding: 50px 50px 0 50px;
+        padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
         background: radial-gradient(circle, $loader-color1 -11.44%, $loader-color2 123.93%);
         -webkit-background-clip: text;
@@ -26,7 +26,7 @@
             display: inline-block;
             font-family: 'Shrikhand', cursive;
             font-size: $loader-size;
-            animation: loader-up-twist $logo-anim-duration cubic-bezier(.49,.5,.51,1.34) both;        
+            animation: loader-down-twist $logo-anim-duration cubic-bezier(.49,.5,.51,1.34) both;        
             @for $i from 1 through 8 {
                 &--#{$i} {
                     animation-delay: $letter-anim-delay * $i;
@@ -58,10 +58,10 @@
         }
     }
     &__counter {
-        padding-bottom: 50px;
+        padding-bottom: $vertical-space;
         @include flex-r-all-center;
         font-family: 'Shrikhand';
-        font-size: $big-title;
+        font-size: $counter-size;
         color: adjust-color($loader-color1, $hue: 15deg, $alpha: -0.3);        
     }        
 }

@@ -13,7 +13,8 @@
     $highlight-txt-color: #008766;
     
 /**font sizes*/
-    $loader-size: 3rem;
+    $loader-size: calc(3.5vw + 3.5vh + .5vmin);
+    $counter-size: calc(1.2vw + 1.2vh + .5vmin);
     $huge-title: 2.5rem;
     $bigger-title: 1.75rem;
     $big-title: 1.5rem;
@@ -28,19 +29,22 @@
 /**********HOME**********/
 
     /****LOADER****/
-    $counter-anim-duration: 0.5s;
-    $counter-anim-delay: $counter-anim-duration/5;
+    $vertical-space: 6vh;
+    $horizontal-space: 5vw;
+
+    $counter-anim-duration: 0s;
+    $counter-anim-delay: calc($counter-anim-duration/5);
 
     $img-anim-duration: 0.5s;
-    $img-anim-delay: $img-anim-duration/5;
+    $img-anim-delay: calc($img-anim-duration/5);
 
     $logo-anim-duration: 0.35s;
-    $letter-anim-delay: $logo-anim-duration/5;
+    $letter-anim-delay: calc($logo-anim-duration/5);
     
-    $total-loader-duration: $logo-anim-duration + $img-anim-duration + $counter-anim-duration;
-    $loader-duration: $total-loader-duration*3;
+    $total-loader-duration: calc($logo-anim-duration*(13/5)) + calc($img-anim-duration*(9/5)) + $counter-anim-duration;
+    $loader-duration: $total-loader-duration;
 
-    $alpha-adjust: 0.15;
+    $alpha-adjust: 0.18;
     $loader-color1: adjust-color($bt-color1, $alpha: $alpha-adjust*-1);
     $loader-color2: adjust-color($bt-color2, $alpha: $alpha-adjust*-1);
     /****DISCOVER****/
