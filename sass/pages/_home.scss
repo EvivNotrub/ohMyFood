@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: adjust-color($highlight-color, $lightness: 26%, $alpha: -0.15);
+    background-color: adjust-color($loader-bg-color, $alpha: -0.15);
     z-index: 500;
     @include flex-clm-ai-center;
     justify-content: space-between;
@@ -20,7 +20,9 @@
         padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
         background: radial-gradient(circle, $loader-color1 -11.44%, $loader-color2 123.93%);
+        background-clip: text;
         -webkit-background-clip: text;
+        color: transparent;
         -webkit-text-fill-color: transparent;
         .letter {
             will-change: transform, opacity;
