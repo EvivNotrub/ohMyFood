@@ -4,6 +4,8 @@
 /************menus*********/
 /**********HOME**********/
 /****LOADER****/
+/**because there is a hight z-index : 
+ needs to be gone just after the effects**/
 /****DISCOVER****/
 /****GUIDELINES****/
 /*ici gauche et droite != car décalage de 12px du rond rose*/
@@ -563,8 +565,8 @@ but unfortunatly also a more complicated css*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  animation: loader-fade-out 2.45s cubic-bezier(1, 0, 0.8, 0.79) both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 2.55s;
+  justify-content: space-between; /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
+  animation: loader-fade-out 3.9s cubic-bezier(1, 0, 0.8, 0.79) both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 4s;
 }
 .loader__logo {
   padding: 6vh 5vw 0 5vw;
@@ -582,28 +584,28 @@ but unfortunatly also a more complicated css*/
   animation: loader-down-twist 0.35s cubic-bezier(0.49, 0.5, 0.51, 1.34) backwards;
 }
 .loader__logo .letter--1 {
-  animation-delay: 1.04375s;
+  animation-delay: 2.04375s;
 }
 .loader__logo .letter--2 {
-  animation-delay: 1.0875s;
+  animation-delay: 2.0875s;
 }
 .loader__logo .letter--3 {
-  animation-delay: 1.13125s;
+  animation-delay: 2.13125s;
 }
 .loader__logo .letter--4 {
-  animation-delay: 1.175s;
+  animation-delay: 2.175s;
 }
 .loader__logo .letter--5 {
-  animation-delay: 1.21875s;
+  animation-delay: 2.21875s;
 }
 .loader__logo .letter--6 {
-  animation-delay: 1.2625s;
+  animation-delay: 2.2625s;
 }
 .loader__logo .letter--7 {
-  animation-delay: 1.30625s;
+  animation-delay: 2.30625s;
 }
 .loader__logo .letter--8 {
-  animation-delay: 1.35s;
+  animation-delay: 2.35s;
 }
 .loader__img {
   width: 90vw;
@@ -623,23 +625,23 @@ but unfortunatly also a more complicated css*/
   opacity: 0;
 }
 .loader__img .restaurant--1 {
-  animation: loader-img-anim1 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
-  animation-delay: 0.325s;
+  animation: loader-img-anim1 0.75s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 0.8875s;
   z-index: -1;
 }
 .loader__img .restaurant--2 {
-  animation: loader-img-anim2 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
-  animation-delay: 0.45s;
+  animation: loader-img-anim2 0.75s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 1.075s;
   z-index: -2;
 }
 .loader__img .restaurant--3 {
-  animation: loader-img-anim3 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
-  animation-delay: 0.575s;
+  animation: loader-img-anim3 0.75s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 1.2625s;
   z-index: -3;
 }
 .loader__img .restaurant--4 {
-  animation: loader-img-anim4 0.5s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
-  animation-delay: 0.7s;
+  animation: loader-img-anim4 0.75s cubic-bezier(0.49, 0.5, 0.51, 1.34) both;
+  animation-delay: 1.45s;
   z-index: -4;
 }
 .loader__counter {
