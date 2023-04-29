@@ -1,3 +1,72 @@
+//i want to create a loader for the home page. It will use the company name ohmyfood and the font familly shrinkhand. The logo 
+//should appear in the middle of the page and a background should be applied to the logo with a radial gradient that is moving.
+//There will be a loader animation with numbers going from 0 to 100% and a text saying "loading" in the bottom part of the page.
+
+
+/****LOADER****/
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: adjust-color($highlight-color, $lightness: 26%, $alpha: -0.15);
+    z-index: 500;
+    @include flex-clm-ai-center;
+    justify-content: space-between;
+    animation: loader-fade-out $loader-duration cubic-bezier(1,0,.8,.79) both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;	
+    &__logo {
+        padding: $vertical-space $horizontal-space 0 $horizontal-space;
+        transform-origin: top right;
+        background: radial-gradient(circle, $loader-color1 -11.44%, $loader-color2 123.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        .letter {
+            will-change: transform, opacity;
+            display: inline-block;
+            font-family: 'Shrikhand', cursive;
+            font-size: $loader-size;
+            animation: loader-down-twist $logo-anim-duration cubic-bezier(.49,.5,.51,1.34) both;        
+            @for $i from 1 through 8 {
+                &--#{$i} {
+                    animation-delay: calc(($letter-anim-delay * $i) + $logo-anim-delay);
+                }                
+            }
+        }        
+    }
+    &__img {
+        width: 90vw;
+        height: 80vh;
+        position: relative;
+        .restaurant {
+            will-change: transform, opacity;
+            position: absolute;
+            left: -15%;
+            top: 35%;
+            width: 50%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            @for $i from 1 through 4 {
+                &--#{$i} {
+                    animation: loader-img-anim#{$i} $imgs-anim-duration cubic-bezier(.49,.5,.51,1.34) both;
+                    animation-delay: calc(($img-anim-delay * $i) + $imgs-anim-delay);
+                    z-index: $i*-1;
+                }                
+            }
+        }
+    }
+    &__counter {
+        padding-bottom: $vertical-space;
+        @include flex-r-all-center;
+        font-family: 'Shrikhand';
+        font-size: $counter-size;
+        color: adjust-color($loader-color1, $hue: 15deg, $alpha: -0.3);        
+    }        
+}
 /****HEADER****/
 .header {
     &__form {

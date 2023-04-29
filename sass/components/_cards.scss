@@ -96,7 +96,7 @@ but unfortunatly also a more complicated css*/
         font-weight:700;
         width: $dish-price-width;
         text-align: end;
-        transition: transform 0.16s cubic-bezier(.55,.01,.71,1.57) 0.025s;
+        transition: transform 0.18s cubic-bezier(.55,.01,.71,1.57) 0.025s;
     }   
     &__check {
         position: absolute;
@@ -110,7 +110,7 @@ but unfortunatly also a more complicated css*/
         transform-origin: right;
         transform: scale(0, 0.5);
         opacity: 0;
-        transition: transform 0.16s cubic-bezier(.67,-0.01,.71,1.46);
+        transition: transform 0.18s cubic-bezier(.67,-0.01,.71,1.46);
         > * {
             @include center-all-50;
         }
