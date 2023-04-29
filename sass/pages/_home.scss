@@ -20,7 +20,9 @@
         padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
         background: radial-gradient(circle, $loader-color1 -11.44%, $loader-color2 123.93%);
+        background-clip: text;
         -webkit-background-clip: text;
+        color: transparent;
         -webkit-text-fill-color: transparent;
         .letter {
             display: inline-block;
