@@ -4,13 +4,10 @@ Projet Open Classrooms cursus intégrateur Web 2023: Améliorez l'interface d'un
 This project is meant to learn building some simple animations in a website during the OpenClassroom program on web integration.
 It is based on their design with a list of animations that should appear on the site when interacting.
 
-heart line: <i class="fa-thin fa-heart"></i>
-heart solid: <i class="fa-solid fa-heart"></i>
-check: <i class="fa-solid fa-circle-check"></i>
-arrow: <i class="fa-sharp fa-solid fa-arrow-left"></i>
-cutlery: <i class="fa-solid fa-utensils"></i>
-hand-shake: <i class="fa-light fa-handshake-angle"></i>
-location: <i class="fa-solid fa-location-dot"></i>
+LOADER:
+With the loader and "background-clip: text",  letters got cut off due to the bounding box and probably to connective script fonts properties. A way to bypass it is to add padding and négative margin. (source: https://stackoverflow.com/questions/19259975/background-clip-property-background-image-is-being-cut-off)
+
+
 
 
 Git/GitHub versions:
