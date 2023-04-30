@@ -46,7 +46,6 @@
         padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
         .letter {
-            will-change: transform, opacity;
             display: inline-block;
             font-family: 'Shrikhand', cursive;
             font-size: $loader-size;
@@ -69,7 +68,6 @@
         height: 80vh;
         position: relative;
         .restaurant {
-            will-change: transform, opacity;
             position: absolute;
             left: -15%;
             top: 35%;

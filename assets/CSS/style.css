@@ -684,7 +684,6 @@ but unfortunatly also a more complicated css*/
   transform-origin: top right;
 }
 .loader__logo .letter {
-  will-change: transform, opacity;
   display: inline-block;
   font-family: "Shrikhand", cursive;
   font-size: calc(3.5vw + 3.5vh + 0.5vmin);
@@ -726,7 +725,6 @@ but unfortunatly also a more complicated css*/
   position: relative;
 }
 .loader__img .restaurant {
-  will-change: transform, opacity;
   position: absolute;
   left: -15%;
   top: 35%;
