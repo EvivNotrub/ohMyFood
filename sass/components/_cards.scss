@@ -63,7 +63,7 @@ but unfortunatly also a more complicated css*/
     background-color: $main-bg-color;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    overflow: hidden;    
+    overflow: hidden;
     &__details {
         @include flex-clm-jc-center; /*is needed to ensure that the price
                 and text alignment stays right given the extra span */

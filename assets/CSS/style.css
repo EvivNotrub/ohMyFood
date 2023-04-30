@@ -146,6 +146,16 @@
     transform: translateY(0);
   }
 }
+/************Menu Dishes***********/
+@keyframes progressiv-appearance {
+  from {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
 body {
   margin: 0;
 }
@@ -497,9 +507,19 @@ but unfortunatly also a more complicated css*/
   gap: 12px;
 }
 .menu__sect__h2 {
+  transform-origin: left;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1rem;
+}
+.menu__sect__h2--1 {
+  animation: progressiv-appearance 0.26s ease-in-out both 0.21s;
+}
+.menu__sect__h2--2 {
+  animation: progressiv-appearance 0.26s ease-in-out both 0.42s;
+}
+.menu__sect__h2--3 {
+  animation: progressiv-appearance 0.26s ease-in-out both 0.63s;
 }
 .menu__sect__h2:after {
   content: "";

@@ -26,6 +26,13 @@
         @include flex-clm;
         gap: 12px;
         &__h2 {
+            transform-origin: left;
+            @for $j from 1 through 3 {                
+                &--#{$j} {
+                    $delay: calc(($j) * 0.21s);
+                    animation: progressiv-appearance 0.26s ease-in-out both $delay;
+                }
+            }
             text-transform: uppercase;
             font-weight: 300;
             font-size: 1rem;
@@ -40,6 +47,7 @@
         &__dishes {
             @include flex-clm;
             gap: 12px;
+            
         }
     }
 }
