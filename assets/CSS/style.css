@@ -61,12 +61,12 @@
     opacity: 1;
     animation-timing-function: linear;
   }
-  70% {
+  90% {
     opacity: 1;
   }
   to {
     opacity: 0;
-    animation-timing-function: cubic-bezier(0.57, 0.43, 0.38, 1.06);
+    animation-timing-function: cubic-bezier(0.68, 0, 0.59, 1.04);
   }
 }
 /************IMAGES LOADER***********/
@@ -112,10 +112,10 @@
 }
 @keyframes disappear {
   from {
-    transform: scale(1, 1);
+    transform: scale(1);
   }
   to {
-    transform: scale(0, 0) translate(500%, 500%);
+    transform: translate(500%, 500%) scale(0);
   }
 }
 @-webkit-keyframes spin {
@@ -589,7 +589,7 @@ but unfortunatly also a more complicated css*/
     gap: 15px;
   }
 }
-/****LOADER****/
+/**************************LOADER**************************/
 .hm-spinner {
   height: 115px;
   width: 115px;
@@ -598,8 +598,8 @@ but unfortunatly also a more complicated css*/
   border-bottom-color: #9C27B0;
   border-radius: 50%;
   position: relative;
-  -webkit-animation: spin 1.5s linear infinite alternate;
-  animation: spin 1.5s linear infinite alternate;
+  -webkit-animation: spin 1s linear infinite alternate;
+  animation: spin 1s linear infinite alternate;
 }
 
 .hm-spinner::before {
@@ -613,8 +613,8 @@ but unfortunatly also a more complicated css*/
   border-top-color: #BA68C8;
   border-bottom-color: #BA68C8;
   border-radius: 50%;
-  -webkit-animation: spin 1.2s cubic-bezier(0.92, 0.51, 0.1, 0.51) infinite;
-  animation: spin 1.2s cubic-bezier(0.92, 0.51, 0.1, 0.51) infinite;
+  -webkit-animation: spin 1.3s cubic-bezier(0.92, 0.51, 0.1, 0.51) infinite;
+  animation: spin 1.3s cubic-bezier(0.92, 0.51, 0.1, 0.51) infinite;
 }
 
 .loader {
@@ -629,12 +629,12 @@ but unfortunatly also a more complicated css*/
   flex-direction: column;
   align-items: center;
   justify-content: space-between; /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 6.9s cubic-bezier(1, 0, 0.8, 0.79) both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 7s;
+  animation: loader-fade-out 6.426s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.526s;
 }
 .loader__logo {
   padding: 6vh 5vw 0 5vw;
   transform-origin: top right;
-  background: radial-gradient(circle, rgba(125, 52, 213, 0.92) -11.44%, rgba(255, 121, 218, 0.92) 123.93%);
+  background: radial-gradient(circle, rgba(125, 52, 213, 0.9) -11.44%, rgba(255, 121, 218, 0.9) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -718,7 +718,7 @@ but unfortunatly also a more complicated css*/
 .loader__counter__txt {
   font-family: "Shrikhand";
   font-size: calc((1vw + 1vh + 0.5vmin) * 2);
-  color: rgba(166, 52, 213, 0.62);
+  color: rgba(166, 52, 213, 0.7);
   animation: subterfuge 1.2s cubic-bezier(0.7, 0.06, 0.74, 1.94) 1s both;
 }
 .loader__counter__spinner {

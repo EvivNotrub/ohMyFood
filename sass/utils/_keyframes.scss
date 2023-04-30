@@ -41,16 +41,16 @@
     }
 }
 @keyframes loader-fade-out {
-    from {
+    from {        
         opacity: 1;
         animation-timing-function: linear;
     }
-    70% {
+    90% {
         opacity: 1;
         }
     to {
         opacity: 0;
-        animation-timing-function: cubic-bezier(.57,.43,.38,1.06) ;
+        animation-timing-function: cubic-bezier(.68,0,.59,1.04) ;
     }
 }
 /************IMAGES LOADER***********/
@@ -72,10 +72,10 @@
 }
 @keyframes disappear {
     from {
-        transform: scale(1,1);
+        transform: scale(1);
     }
     to {
-        transform: scale(0,0) translate(500%, 500%);
+        transform: translate(500%, 500%) scale(0) ;
     }	
 }
 

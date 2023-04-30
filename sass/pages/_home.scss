@@ -3,7 +3,7 @@
 //There will be a loader animation with numbers going from 0 to 100% and a text saying "loading" in the bottom part of the page.
 
 
-/****LOADER****/
+/**************************LOADER**************************/
 .hm-spinner{
     height: 115px;
     width: 115px;
@@ -12,8 +12,8 @@
     border-bottom-color: #9C27B0;
     border-radius: 50%;
     position: relative;
-    -webkit-animation: spin 1.5s linear infinite alternate;
-            animation: spin 1.5s linear infinite alternate;
+    -webkit-animation: spin 1s linear infinite alternate;
+            animation: spin 1s linear infinite alternate;
   }
   
   .hm-spinner::before{
@@ -27,8 +27,8 @@
     border-top-color: #BA68C8;
     border-bottom-color: #BA68C8;
     border-radius: 50%;
-    -webkit-animation: spin 1.2s cubic-bezier(.92,.51,.1,.51) infinite;
-    animation: spin 1.2s cubic-bezier(.92,.51,.1,.51) infinite;
+    -webkit-animation: spin 1.3s cubic-bezier(.92,.51,.1,.51) infinite;
+    animation: spin 1.3s cubic-bezier(.92,.51,.1,.51) infinite;
   
   }
 .loader {
@@ -41,7 +41,7 @@
     z-index: 500;
     @include flex-clm-ai-center;
     justify-content: space-between;        /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-    animation: loader-fade-out $loader-duration cubic-bezier(1,0,.8,.79) both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;	
+    animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;	
     &__logo {
         padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
@@ -94,7 +94,7 @@
         &__txt {
             font-family: 'Shrikhand';
             font-size: $counter-size;
-            color: adjust-color($loader-color1, $hue: 15deg, $alpha: -0.3);  
+            color: $counter-color;  
             animation: subterfuge 1.2s cubic-bezier(.7,.06,.74,1.94) 1s both ;
         }
         &__spinner {
