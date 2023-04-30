@@ -29,7 +29,7 @@
             transform-origin: left;
             @for $j from 1 through 3 {                
                 &--#{$j} {
-                    $delay: calc((($j) * 0.16s) + 0.1s);
+                    $delay: calc((($j) * 0.18s) + 0.15s);
                     animation: progressiv-appearance 0.24s ease-in-out both $delay;
                 }
             }
@@ -47,7 +47,15 @@
         &__dishes {
             @include flex-clm;
             gap: 12px;
-            
+            .dish-card {
+                transform-origin: left;
+                @for $l from 1 through 4 {                
+                    &--#{$l} {
+                        $delay: calc((($l) * 0.12s) + 0.5s);
+                        animation: progressiv-appearance 0.35s ease-in-out both $delay;
+                    }
+                }
+            }
         }
     }
 }
