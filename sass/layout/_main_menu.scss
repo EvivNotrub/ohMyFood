@@ -29,8 +29,8 @@
             transform-origin: left;
             @for $j from 1 through 3 {                
                 &--#{$j} {
-                    $delay: calc(($j) * 0.21s);
-                    animation: progressiv-appearance 0.26s ease-in-out both $delay;
+                    $delay: calc((($j) * 0.18s) + 0.15s);
+                    animation: progressiv-appearance 0.24s ease-in-out both $delay;
                 }
             }
             text-transform: uppercase;
@@ -47,7 +47,17 @@
         &__dishes {
             @include flex-clm;
             gap: 12px;
-            
+            .dish-card {
+                transform-origin: left;
+                /*ici j'ai volontairement fait la boucle plus grande
+                 au cas où il y aurait plus de plats dans le future*/
+                @for $l from 1 through 7 {                
+                    &--#{$l} {
+                        $delay: calc((($l) * 0.12s) + 0.5s);
+                        animation: progressiv-appearance 0.35s ease-in-out both $delay;
+                    }
+                }
+            }
         }
     }
 }
