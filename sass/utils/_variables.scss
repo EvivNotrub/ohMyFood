@@ -50,10 +50,10 @@
     $disappear-delay: $loader-duration + 0.1s; /**because there is a hight z-index : 
                                                 needs to be gone just after the effects**/
 
-    $alpha-adjust: -0.10;
+    $alpha-adjust: -0.08;
     $loader-color1: adjust-color($bt-color1, $alpha: $alpha-adjust, $lightness: -8%);
     $loader-color2: adjust-color($bt-color2, $alpha: $alpha-adjust);
-    $counter-color: adjust-color($loader-color1, $hue: 15deg, $alpha: -0.2);
+    $counter-color: adjust-color($loader-color1, $hue: 15deg, $alpha: -0.7);
     /****DISCOVER****/
     $discover-bx-paddg: 40px 30px;
 

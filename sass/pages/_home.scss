@@ -37,7 +37,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: adjust-color($loader-bg-color, $alpha: -0.15);
+    background-color: adjust-color($loader-bg-color, $alpha: -0.2);
     z-index: 500;
     @include flex-clm-ai-center;
     justify-content: space-between;        /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
@@ -48,8 +48,7 @@
         background: radial-gradient(circle, $loader-color1 -11.44%, $loader-color2 123.93%);
         background-clip: text;
         -webkit-background-clip: text;
-        color: transparent;
-        -webkit-text-fill-color: transparent;
+        color: $counter-color;
         .letter {
             display: inline-block;
             font-family: 'Shrikhand', cursive;
@@ -94,7 +93,7 @@
         &__txt {
             font-family: 'Shrikhand';
             font-size: $counter-size;
-            color: $counter-color;  
+            color: adjust-color($loader-color1, $hue: 15deg, $alpha: -0.2);  
             animation: subterfuge 1.2s cubic-bezier(.7,.06,.74,1.94) 1s both ;
         }
         &__spinner {
