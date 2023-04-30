@@ -42,7 +42,7 @@
     $img-anim-delay: calc($imgs-anim-duration/4);
 
     $logo-anim-duration: 0.35s;
-    $logo-anim-delay: 4s;
+    $logo-anim-delay: 3.65s;
     $letter-anim-delay: calc($logo-anim-duration/8);
     
     $total-loader-duration: max($logo-anim-duration, $imgs-anim-duration ) + max($logo-anim-delay, $imgs-anim-delay) + $counter-anim-duration;
