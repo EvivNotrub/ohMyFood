@@ -49,7 +49,9 @@
             gap: 12px;
             .dish-card {
                 transform-origin: left;
-                @for $l from 1 through 4 {                
+                /*ici j'ai volontairement fait la boucle plus grande
+                 au cas où il y aurait plus de plats dans le future*/
+                @for $l from 1 through 7 {                
                     &--#{$l} {
                         $delay: calc((($l) * 0.12s) + 0.5s);
                         animation: progressiv-appearance 0.35s ease-in-out both $delay;

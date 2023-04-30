@@ -535,6 +535,8 @@ but unfortunatly also a more complicated css*/
 }
 .menu__sect__dishes .dish-card {
   transform-origin: left;
+  /*ici j'ai volontairement fait la boucle plus grande
+   au cas où il y aurait plus de plats dans le future*/
 }
 .menu__sect__dishes .dish-card--1 {
   animation: progressiv-appearance 0.35s ease-in-out both 0.62s;
@@ -547,6 +549,15 @@ but unfortunatly also a more complicated css*/
 }
 .menu__sect__dishes .dish-card--4 {
   animation: progressiv-appearance 0.35s ease-in-out both 0.98s;
+}
+.menu__sect__dishes .dish-card--5 {
+  animation: progressiv-appearance 0.35s ease-in-out both 1.1s;
+}
+.menu__sect__dishes .dish-card--6 {
+  animation: progressiv-appearance 0.35s ease-in-out both 1.22s;
+}
+.menu__sect__dishes .dish-card--7 {
+  animation: progressiv-appearance 0.35s ease-in-out both 1.34s;
 }
 
 /****HEADER****/
