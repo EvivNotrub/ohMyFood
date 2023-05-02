@@ -32,16 +32,33 @@
   
   }
 .loader {
+    &__background {
+        background-color: adjust-color($loader-bg-color, $alpha: -0.15);
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
+    animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;
+    }
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: adjust-color($loader-bg-color, $alpha: -0.2);
-    z-index: 500;
+    z-index: 13;
+    padding: 10vh 0;
     @include flex-clm-ai-center;
-    justify-content: space-between;        /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-    animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;	
+    justify-content: center;
+    gap: 20vh;
+    @media (min-width: 1024px) {
+        gap: 35vh;
+        justify-content: flex-start;
+    }
+        /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
+        animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;
     &__logo {
         padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
@@ -63,34 +80,15 @@
             }
         }        
     }
-    &__img {
-        width: 90vw;
-        height: 80vh;
-        position: relative;
-        .restaurant {
-            position: absolute;
-            left: -15%;
-            top: 35%;
-            width: 50%;
-            height: 60%;
-            object-fit: cover;
-            border-radius: 25px;
-            box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.45);
-            opacity: 0;
-            @for $i from 1 through 4 {
-                &--#{$i} {
-                    animation: loader-img-anim#{$i} $imgs-anim-duration cubic-bezier(.49,.5,.51,1.34) both;
-                    animation-delay: calc(($img-anim-delay * $i) + $imgs-anim-delay);
-                    z-index: $i*-1;
-                }                
-            }
-        }
-    }
+    
     &__counter {
         padding-bottom: $vertical-space;
         @include flex-r-all-center;
         gap: 10%;
         animation: descent $counter-anim-duration cubic-bezier(.47,-0.5,.49,1.6) $counter-anim-delay both;
+        @media (min-width: 1024px) {
+            animation: ascent $counter-anim-duration cubic-bezier(.47,-0.5,.49,1.6) $counter-anim-delay both;
+        }
         &__txt {
             font-family: 'Shrikhand';
             font-size: $counter-size;
@@ -171,6 +169,19 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         gap: 18px;
+        .img-anim {
+            @media (min-width: 1024px) {
+                position: relative; 
+                z-index: 11;
+                @for $n from 1 through 4 {
+                    &-#{$n} {
+                        animation: img-translation#{$n} $imgs-anim-duration both;
+                        animation-delay: calc(($img-anim-delay*$n) + $imgs-anim-delay);
+                    }
+                }
+            }
+            
+        }
     }
 
 }

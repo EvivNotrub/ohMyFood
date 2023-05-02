@@ -50,6 +50,18 @@
     left: 0;
     right: 0;
 }
+@mixin absolute-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+@mixin absolute-top-left($abs-top: 0, $abs-left: 0) {
+    position: absolute;
+    top: $abs-top;
+    left: $abs-left;
+}
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 @mixin filter-svg-white {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);
@@ -62,16 +74,13 @@
 
 @mixin fancy-check {
     position: relative;
-    height: 23px;
-    width: 23px;
+    height: 22px;
+    width: 22px;
     font-size: 21px;
+    text-align: center;
     .ghost-check {
         cursor: pointer;
-        position: absolute;
-        width: 23px;
-        height: 23px;
-        top: 0;
-        left: 0;
+        @include absolute-fill;
         opacity: 0;
         z-index: 1;
         &:hover {
@@ -93,9 +102,7 @@
     }
     .checked-icon {
         font-size: 21px;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute-top-left;
         background: $linear-gradient;
         background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -106,9 +113,7 @@
     }
     .unchecked-icon {
         font-size: 21px;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute-top-left;
         transform: scale(1);
         transition: transform 228ms cubic-bezier(.65,.11,.33,1.03) 45ms, opacity 163ms cubic-bezier(.22,.72,.82,.5);        
     }

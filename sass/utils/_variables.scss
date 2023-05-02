@@ -14,8 +14,9 @@
     $highlight-txt-color: #008766;
 
     
-/**font sizes*/
-    $loader-size: calc(3.5vw + 3.5vh + .5vmin);
+/**FONT SIZES***/
+    $viewport-size: calc(1vw + 1vh + .5vmin);
+    $loader-size: calc(3vw + 2vh + 5vmin);
     $counter-size: calc((1vw + 1vh + .5vmin)*2);
     $huge-title: 2.5rem;
     $bigger-title: 1.75rem;
@@ -37,20 +38,20 @@
     $counter-anim-duration: 2s;
     $counter-anim-delay: calc($counter-anim-duration*0.8);
 
-    $imgs-anim-duration: 0.75s;
-    $imgs-anim-delay: 2.7s;
+    $imgs-anim-duration: 1.6s;
+    $imgs-anim-delay: 2s;
     $img-anim-delay: calc($imgs-anim-duration/4);
 
     $logo-anim-duration: 0.35s;
     $logo-anim-delay: 3.65s;
     $letter-anim-delay: calc($logo-anim-duration/8);
     
-    $total-loader-duration: max($logo-anim-duration, $imgs-anim-duration ) + max($logo-anim-delay, $imgs-anim-delay) + $counter-anim-duration;
-    $loader-duration: $total-loader-duration - 0.324s ;
-    $disappear-delay: $loader-duration + 0.1s; /**because there is a hight z-index : 
-                                                needs to be gone just after the effects**/
+    $total-loader-duration: max($logo-anim-duration, $imgs-anim-duration, $counter-anim-duration ) + max($logo-anim-delay, $imgs-anim-delay);
+    $loader-duration: $total-loader-duration + 0.7s ;
+    $disappear-delay: $loader-duration + 0.1s; 
+    /**because there is a hight z-index : needs to be gone just after the effects**/
 
-/***linear gradient? if not discard somme variables below****/
+/***linear gradient on loader letters? if not discard somme variables below****/
     $alpha-adjust: -0.08;
     $loader-color1: adjust-color($bt-color1, $alpha: $alpha-adjust, $lightness: -8%);
     $loader-color2: adjust-color($bt-color2, $alpha: $alpha-adjust);
