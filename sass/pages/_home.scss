@@ -32,23 +32,33 @@
   
   }
 .loader {
+    &__background {
+        background-color: adjust-color($loader-bg-color, $alpha: -0.15);
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
+    animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;
+    }
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: 13;
     padding: 10vh 0;
     @include flex-clm-ai-center;
-    background-color: adjust-color($loader-bg-color, $alpha: -0.10);
     justify-content: center;
     gap: 20vh;
     @media (min-width: 1024px) {
-        gap: 40vh;
+        gap: 35vh;
         justify-content: flex-start;
     }
-    /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-    animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;	
+        /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
+        animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;
     &__logo {
         padding: $vertical-space $horizontal-space 0 $horizontal-space;
         transform-origin: top right;
@@ -162,7 +172,7 @@
         .img-anim {
             @media (min-width: 1024px) {
                 position: relative; 
-                z-index: 3;
+                z-index: 11;
                 @for $n from 1 through 4 {
                     &-#{$n} {
                         animation: img-translation#{$n} 1.8s both  ;
