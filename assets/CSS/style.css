@@ -454,7 +454,7 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: subterfuge 0.25s ease-in both 6.45s;
+  animation: subterfuge 0.25s ease-in both 5.75s;
 }
 .card .checkbox-heart {
   position: absolute;
@@ -743,7 +743,7 @@ but unfortunatly also a more complicated css*/
   justify-content: center;
   gap: 20vh;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 6.35s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.45s;
+  animation: loader-fade-out 5.65s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 5.75s;
 }
 .loader__background {
   background-color: rgba(255, 255, 255, 0.85);
@@ -754,7 +754,7 @@ but unfortunatly also a more complicated css*/
   width: 100%;
   height: 100%;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 6.35s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.45s;
+  animation: loader-fade-out 5.65s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 5.75s;
 }
 @media (min-width: 1024px) {
   .loader {
@@ -776,31 +776,31 @@ but unfortunatly also a more complicated css*/
   color: transparent;
   padding: 0 25px; /*to avoid letter cut-off -> see comment in Readme/LOADER*/
   margin: 0 -25px;
-  animation: loader-down-twist 0.35s cubic-bezier(0.49, 0.5, 0.51, 1.34) backwards;
+  animation: loader-down-twist 0.42s cubic-bezier(0.49, 0.5, 0.51, 1.34) backwards;
 }
 .loader__logo .letter--1 {
-  animation-delay: 3.69375s;
+  animation-delay: 3.0025s;
 }
 .loader__logo .letter--2 {
-  animation-delay: 3.7375s;
+  animation-delay: 3.055s;
 }
 .loader__logo .letter--3 {
-  animation-delay: 3.78125s;
+  animation-delay: 3.1075s;
 }
 .loader__logo .letter--4 {
-  animation-delay: 3.825s;
+  animation-delay: 3.16s;
 }
 .loader__logo .letter--5 {
-  animation-delay: 3.86875s;
+  animation-delay: 3.2125s;
 }
 .loader__logo .letter--6 {
-  animation-delay: 3.9125s;
+  animation-delay: 3.265s;
 }
 .loader__logo .letter--7 {
-  animation-delay: 3.95625s;
+  animation-delay: 3.3175s;
 }
 .loader__logo .letter--8 {
-  animation-delay: 4s;
+  animation-delay: 3.37s;
 }
 .loader__counter {
   padding-bottom: 6vh;
@@ -922,20 +922,20 @@ but unfortunatly also a more complicated css*/
     z-index: 11;
   }
   .restaurants__cards .img-anim-1 {
-    animation: img-translation1 1.6s both;
-    animation-delay: 2.4s;
+    animation: img-translation1 1.7s both;
+    animation-delay: 2.3428571429s;
   }
   .restaurants__cards .img-anim-2 {
-    animation: img-translation2 1.6s both;
-    animation-delay: 2.8s;
+    animation: img-translation2 1.7s both;
+    animation-delay: 2.5857142857s;
   }
   .restaurants__cards .img-anim-3 {
-    animation: img-translation3 1.6s both;
-    animation-delay: 3.2s;
+    animation: img-translation3 1.7s both;
+    animation-delay: 2.8285714286s;
   }
   .restaurants__cards .img-anim-4 {
-    animation: img-translation4 1.6s both;
-    animation-delay: 3.6s;
+    animation: img-translation4 1.7s both;
+    animation-delay: 3.0714285714s;
   }
 }
 
