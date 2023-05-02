@@ -11,7 +11,10 @@
         <script src="https://kit.fontawesome.com/07c53e1cc6.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <aside class="loader__background"></aside>
+        <aside class="loader__background"></aside> 
+        <!-- the background needs to be appart because of the images from the main page
+            images are showing up during loading on top of the background,
+            but the logo and loader-anim need a higher z-index in case you scroll down during loading-->
         <aside class="loader">
             <div class="loader__logo">
                 <p class="letter letter--1">O</p>

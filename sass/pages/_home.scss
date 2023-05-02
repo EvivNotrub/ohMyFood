@@ -175,8 +175,8 @@
                 z-index: 11;
                 @for $n from 1 through 4 {
                     &-#{$n} {
-                        animation: img-translation#{$n} 1.8s both  ;
-                        animation-delay: calc( 2s + ($n * 0.5s));
+                        animation: img-translation#{$n} $imgs-anim-duration both;
+                        animation-delay: calc(($img-anim-delay*$n) + $imgs-anim-delay);
                     }
                 }
             }

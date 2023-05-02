@@ -5,7 +5,7 @@
 /**********HOME**********/
 /****LOADER****/
 /**because there is a hight z-index : needs to be gone just after the effects**/
-/***linear gradient? if not discard somme variables below****/
+/***linear gradient on loader letters? if not discard somme variables below****/
 /*in case the background on the letters doesn't show up*/
 /****DISCOVER****/
 /****GUIDELINES****/
@@ -70,48 +70,6 @@
     animation-timing-function: cubic-bezier(0.68, 0, 0.59, 1.04);
   }
 }
-/************IMAGES LOADER OLD VERSION***********/
-@keyframes loader-img-anim1 {
-  from {
-    transform: translate(-100%, -70%) scale(0.5, 0.5);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0%, 0%) scale(1, 1);
-    opacity: 1;
-  }
-}
-@keyframes loader-img-anim2 {
-  from {
-    transform: translate(-100%, -70%) scale(0.5, 0.5);
-    opacity: 0;
-  }
-  to {
-    transform: translate(50%, -17.2%) scale(1, 1);
-    opacity: 1;
-  }
-}
-@keyframes loader-img-anim3 {
-  from {
-    transform: translate(-100%, -70%) scale(0.5, 0.5);
-    opacity: 0;
-  }
-  to {
-    transform: translate(100%, -34.4%) scale(1, 1);
-    opacity: 1;
-  }
-}
-@keyframes loader-img-anim4 {
-  from {
-    transform: translate(-100%, -70%) scale(0.5, 0.5);
-    opacity: 0;
-  }
-  to {
-    transform: translate(150%, -51.6%) scale(1, 1);
-    opacity: 1;
-  }
-}
-/************************************************/
 @media (min-width: 1024px) {
   @keyframes img-translation1 {
     from {
@@ -220,6 +178,48 @@
     transform: scale(1, 1);
   }
 }
+/************IMAGES LOADER OLD VERSION***********/
+@keyframes loader-img-anim1 {
+  from {
+    transform: translate(-100%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes loader-img-anim2 {
+  from {
+    transform: translate(-100%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(50%, -17.2%) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes loader-img-anim3 {
+  from {
+    transform: translate(-100%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(100%, -34.4%) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes loader-img-anim4 {
+  from {
+    transform: translate(-100%, -70%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(150%, -51.6%) scale(1, 1);
+    opacity: 1;
+  }
+}
+/************************************************/
 body {
   margin: 0;
 }
@@ -454,7 +454,7 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: subterfuge 0.25s ease-in both 6.176s;
+  animation: subterfuge 0.25s ease-in both 6.45s;
 }
 .card .checkbox-heart {
   position: absolute;
@@ -743,7 +743,7 @@ but unfortunatly also a more complicated css*/
   justify-content: center;
   gap: 20vh;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 6.076s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.176s;
+  animation: loader-fade-out 6.35s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.45s;
 }
 .loader__background {
   background-color: rgba(255, 255, 255, 0.85);
@@ -754,7 +754,7 @@ but unfortunatly also a more complicated css*/
   width: 100%;
   height: 100%;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 6.076s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.176s;
+  animation: loader-fade-out 6.35s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 6.45s;
 }
 @media (min-width: 1024px) {
   .loader {
@@ -922,20 +922,20 @@ but unfortunatly also a more complicated css*/
     z-index: 11;
   }
   .restaurants__cards .img-anim-1 {
-    animation: img-translation1 1.8s both;
-    animation-delay: 2.5s;
+    animation: img-translation1 1.6s both;
+    animation-delay: 2.4s;
   }
   .restaurants__cards .img-anim-2 {
-    animation: img-translation2 1.8s both;
-    animation-delay: 3s;
+    animation: img-translation2 1.6s both;
+    animation-delay: 2.8s;
   }
   .restaurants__cards .img-anim-3 {
-    animation: img-translation3 1.8s both;
-    animation-delay: 3.5s;
+    animation: img-translation3 1.6s both;
+    animation-delay: 3.2s;
   }
   .restaurants__cards .img-anim-4 {
-    animation: img-translation4 1.8s both;
-    animation-delay: 4s;
+    animation: img-translation4 1.6s both;
+    animation-delay: 3.6s;
   }
 }
 
