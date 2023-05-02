@@ -769,7 +769,7 @@ but unfortunatly also a more complicated css*/
 .loader__logo .letter {
   display: inline-block;
   font-family: "Shrikhand", cursive;
-  font-size: calc(3.5vw + 3.5vh + 0.5vmin);
+  font-size: calc(3vw + 2vh + 5vmin);
   background: linear-gradient(60deg, rgba(125, 52, 213, 0.92) -11.44%, rgba(255, 121, 218, 0.92) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
