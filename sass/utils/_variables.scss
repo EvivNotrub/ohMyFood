@@ -38,12 +38,12 @@
     $counter-anim-duration: 2s;
     $counter-anim-delay: calc($counter-anim-duration*0.8);
 
-    $imgs-anim-duration: 1.6s;
-    $imgs-anim-delay: 2s;
-    $img-anim-delay: calc($imgs-anim-duration/4);
+    $imgs-anim-duration: 1.7s;
+    $imgs-anim-delay: 2.1s;
+    $img-anim-delay: calc($imgs-anim-duration/7);
 
-    $logo-anim-duration: 0.35s;
-    $logo-anim-delay: 3.65s;
+    $logo-anim-duration: 0.42s;
+    $logo-anim-delay: 2.95s;
     $letter-anim-delay: calc($logo-anim-duration/8);
     
     $total-loader-duration: max($logo-anim-duration, $imgs-anim-duration, $counter-anim-duration ) + max($logo-anim-delay, $imgs-anim-delay);
