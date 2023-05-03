@@ -395,14 +395,14 @@ h1, h2 {
   z-index: 3;
   /*In order to avoid text overlapping when unchecked*/
 }
-.checkbox-dish__ghost-check:checked ~ .checked {
+.checkbox-dish__ghost-check:checked ~ .checked, .checkbox-dish__ghost-check:hover ~ .checked {
   opacity: 1;
   transform: scale(1, 1);
 }
-.checkbox-dish__ghost-check:checked ~ .dish-card__price {
+.checkbox-dish__ghost-check:checked ~ .dish-card__price, .checkbox-dish__ghost-check:hover ~ .dish-card__price {
   transform: translateX(-59px);
 }
-.checkbox-dish__ghost-check:checked ~ .dish-card__details > span {
+.checkbox-dish__ghost-check:checked ~ .dish-card__details > span, .checkbox-dish__ghost-check:hover ~ .dish-card__details > span {
   width: calc(100% - 74px);
 }
 .checkbox-dish__ghost-check:not(:checked) ~ .dish-card__price {
