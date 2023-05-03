@@ -723,10 +723,9 @@ but unfortunatly also a more complicated css*/
   border-bottom-color: #9C27B0;
   border-radius: 50%;
   position: relative;
-  -webkit-animation: spin 1s linear infinite alternate;
-  animation: spin 1s linear infinite alternate;
+  -webkit-animation: spin 1s linear 30 alternate;
+  animation: spin 1s linear 30 alternate;
 }
-
 .hm-spinner::before {
   content: "";
   position: absolute;
@@ -738,8 +737,8 @@ but unfortunatly also a more complicated css*/
   border-top-color: #BA68C8;
   border-bottom-color: #BA68C8;
   border-radius: 50%;
-  -webkit-animation: spin 1.3s cubic-bezier(0.92, 0.51, 0.1, 0.51) infinite;
-  animation: spin 1.3s cubic-bezier(0.92, 0.51, 0.1, 0.51) infinite;
+  -webkit-animation: spin 1.3s cubic-bezier(0.92, 0.51, 0.1, 0.51) 30;
+  animation: spin 1.3s cubic-bezier(0.92, 0.51, 0.1, 0.51) 30;
 }
 
 .loader {
@@ -838,7 +837,7 @@ but unfortunatly also a more complicated css*/
   animation: transX 0.8s ease-in-out both 0.8s;
 }
 
-/****HEADER****/
+/****************HEADER***************/
 .header__form {
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   width: 100%;

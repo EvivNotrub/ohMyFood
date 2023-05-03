@@ -12,25 +12,24 @@
     border-bottom-color: #9C27B0;
     border-radius: 50%;
     position: relative;
-    -webkit-animation: spin 1s linear infinite alternate;
-            animation: spin 1s linear infinite alternate;
-  }
+    -webkit-animation: spin 1s linear 30 alternate;
+            animation: spin 1s linear 30 alternate;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        border: 5px solid transparent;
+        border-top-color: #BA68C8;
+        border-bottom-color: #BA68C8;
+        border-radius: 50%;
+        -webkit-animation: spin 1.3s cubic-bezier(.92,.51,.1,.51) 30;
+                animation: spin 1.3s cubic-bezier(.92,.51,.1,.51) 30;
+    }
+  };
   
-  .hm-spinner::before{
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-    border: 5px solid transparent;
-    border-top-color: #BA68C8;
-    border-bottom-color: #BA68C8;
-    border-radius: 50%;
-    -webkit-animation: spin 1.3s cubic-bezier(.92,.51,.1,.51) infinite;
-    animation: spin 1.3s cubic-bezier(.92,.51,.1,.51) infinite;
-  
-  }
 .loader {
     &__background {
         background-color: adjust-color($loader-bg-color, $alpha: -0.15);
@@ -100,7 +99,7 @@
         }
     }        
 }
-/****HEADER****/
+/****************HEADER***************/
 .header {
     &__form {
         box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
