@@ -5,7 +5,9 @@
         height: 64px;
         position: relative;
         &__img {
-            @include header-logo;
+            width: 10rem;
+            height: 2.1rem;
+            @include center-all-50;
         }
         &__link {
             position: absolute;
