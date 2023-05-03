@@ -74,7 +74,8 @@ but unfortunatly also a more complicated css*/
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: calc(100% - ($dish-spacing-width));
+        width: calc(100% - ($dish-spacing-width)); 
+/*to ensure a good "overflow: ellipsis" given the absolut position of the element on the right*/
         }
     }
     &__h3 {

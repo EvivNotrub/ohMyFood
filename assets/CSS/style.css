@@ -496,6 +496,7 @@ but unfortunatly also a more complicated css*/
   text-overflow: ellipsis;
   white-space: nowrap;
   width: calc(100% - 15px);
+  /*to ensure a good "overflow: ellipsis" given the absolut position of the element on the right*/
 }
 .dish-card__h3 {
   width: 90%;
