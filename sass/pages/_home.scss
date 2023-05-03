@@ -173,7 +173,7 @@
             @media (min-width: 1024px) {
                 position: relative; 
                 z-index: 11;
-                @for $n from 1 through 4 {
+                @for $n from 1 through $number-of-img {
                     &-#{$n} {
                         animation: img-translation#{$n} $imgs-anim-duration both;
                         animation-delay: calc(($img-anim-delay*$n) + $imgs-anim-delay);

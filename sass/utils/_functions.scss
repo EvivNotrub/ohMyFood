@@ -1,0 +1,12 @@
+
+@function is-integer($value){
+    @return round($value) == $value;
+};
+
+@function is-even($value){
+    @if(is-integer($value/2)){
+        @return true;
+    }@else{
+        @return false;
+    } 
+}

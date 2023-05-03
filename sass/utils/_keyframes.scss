@@ -56,15 +56,17 @@
 
 
 @media (min-width: 1024px) {
-    @for $i from 1 through 4 {
-        $X: 0;
+    @for $i from 1 through $number-of-img {
+        $X:0;
         $Y:0;
         @if($i<3){
             $Y: -100%;
+        }@else if($i<($number-of-img - 1)){
+            $Y: 0%;
         }@else{
             $Y: 100%;
         };
-        @if($i==2) or ($i==4){
+        @if(is-even($i)){
             $X: 70%;
         }@else{
             $X: -70%;
