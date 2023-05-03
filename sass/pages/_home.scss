@@ -53,7 +53,7 @@
     @include flex-clm-ai-center;
     justify-content: center;
     gap: 20vh;
-    @media (min-width: 1024px) {
+    @include desktop-only {
         gap: 35vh;
         justify-content: flex-start;
     }
@@ -86,7 +86,7 @@
         @include flex-r-all-center;
         gap: 10%;
         animation: descent $counter-anim-duration cubic-bezier(.47,-0.5,.49,1.6) $counter-anim-delay both;
-        @media (min-width: 1024px) {
+        @include desktop-only {
             animation: ascent $counter-anim-duration cubic-bezier(.47,-0.5,.49,1.6) $counter-anim-delay both;
         }
         &__txt {
@@ -170,7 +170,7 @@
         grid-template-rows: repeat(4, 1fr);
         gap: 18px;
         .img-anim {
-            @media (min-width: 1024px) {
+            @include desktop-only {
                 position: relative; 
                 z-index: 11;
                 @for $n from 1 through $number-of-img {
@@ -179,11 +179,9 @@
                         animation-delay: calc(($img-anim-delay*$n) + $imgs-anim-delay);
                     }
                 }
-            }
-            
+            }            
         }
     }
-
 }
 
 @media  (min-width: 768px) {

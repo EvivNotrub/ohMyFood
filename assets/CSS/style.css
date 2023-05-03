@@ -12,6 +12,7 @@
 /*ici gauche et droite != car décalage de 12px du rond rose*/
 /****RESTAURANTS****/
 /****TOOLS****/
+/**BREAKPOINTS**/
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
 /****ELEMENTS OF HOME/RESTAURANTS THAT COULD BE USED LATER****/
@@ -631,6 +632,11 @@ but unfortunatly also a more complicated css*/
   height: 64px;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .header__div-logo {
+    height: 96px;
+  }
+}
 .header__div-logo__img {
   width: 10rem;
   height: 2.1rem;
@@ -638,6 +644,12 @@ but unfortunatly also a more complicated css*/
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 1024px) {
+  .header__div-logo__img {
+    width: 15rem;
+    height: 2.5rem;
+  }
 }
 .header__div-logo__link {
   position: absolute;

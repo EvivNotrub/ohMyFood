@@ -4,10 +4,17 @@
     &__div-logo {
         height: 64px;
         position: relative;
+        @include desktop-only {
+            height: 96px;      
+        }
         &__img {
             width: 10rem;
             height: 2.1rem;
             @include center-all-50;
+            @include desktop-only {
+                width: 15rem;
+                height: 2.5rem;
+            }
         }
         &__link {
             position: absolute;
