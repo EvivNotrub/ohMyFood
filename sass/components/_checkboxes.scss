@@ -5,7 +5,50 @@
  with some custom content*/
 
 .checkbox-heart {
-    @include fancy-check;
+    position: relative;
+    height: 22px;
+    width: 22px;
+    font-size: 21px;
+    text-align: center;
+    .ghost-check {
+        cursor: pointer;
+        @include absolute-fill;
+        opacity: 0;
+        z-index: 1;
+        &:hover {
+            ~ .unchecked-icon{
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35) ;
+            }
+            ~ .checked-icon {
+                text-shadow: 1px 1px 3px #b656dca4 ;            
+            }
+        }                
+        &:checked ~ .checked-icon {
+            transform: scale(1) rotate(0);
+            opacity: 1;
+        }
+        &:checked ~ .unchecked-icon {
+            opacity: 0;
+            transform: scale(0.35, 0.65);
+        }            
+    }
+    .checked-icon {
+        font-size: 21px;
+        @include absolute-top-left;
+        background: $linear-gradient;
+        background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        transition: transform 244ms cubic-bezier(.79,.22,.62,1.61), opacity 100ms linear;
+        transform: scale(0) rotate(-180deg);
+        opacity: 0.5;
+    }
+    .unchecked-icon {
+        font-size: 21px;
+        @include absolute-top-left;
+        transform: scale(1);
+        transition: transform 228ms cubic-bezier(.65,.11,.33,1.03) 45ms, opacity 163ms cubic-bezier(.22,.72,.82,.5);        
+    }
 }
 
 .checkbox-dish {
