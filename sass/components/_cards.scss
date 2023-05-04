@@ -109,10 +109,10 @@ but unfortunatly also a more complicated css*/
         color: $footer-font-color;
         border-radius: 0px 15px 15px 0px;
         background-color: $highlight-color;
-        transform-origin: right;
-        transform: scale(0, 0.5);
+        transform-origin: right bottom;
+        transform: scale(0, 0.25);
         opacity: 0;
-        transition: transform 0.18s cubic-bezier(.67,-0.01,.71,1.46);
+        transition: transform 0.18s cubic-bezier(.67,-0.01,.71,1.46) 0s , opacity 0.15s cubic-bezier(.52,-0.01,.77,1.03) 0s;
         > * {
             @include center-all-50;
         }
