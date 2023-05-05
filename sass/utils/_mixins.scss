@@ -68,6 +68,11 @@
         @content;
     }
 }
+@mixin from-tablet-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 @mixin filter-svg-white {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);

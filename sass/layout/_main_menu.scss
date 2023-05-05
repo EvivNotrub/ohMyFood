@@ -1,12 +1,27 @@
-
-.menu {
+.main-restaurants {
+    box-sizing: border-box;
     height: 100%;
-    max-width: 650px;
-    padding: 40px 13px;
+    width: 100%;
+    max-width: 747.52px;
+    @include desktop-only {
+        max-width: 73%;
+    }
     background-color: #F6F6F6;
     border-radius: 40px 40px 0px 0px;
+    padding: 40px 13px;
+    margin: auto;
+}
+.menu {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
     @include flex-clm-ai-center;
     gap: 40px;
+    max-width: 611.91px;
+    @include from-tablet-up {
+        width: 84.813%;
+        max-width: 700px;
+    }
     margin: auto;
     &__head {
         box-sizing: border-box;
@@ -14,6 +29,10 @@
         padding: 0 28px 0 4px;
         @include flex-r-ai-center;
         justify-content: space-between;
+        @include desktop-only {
+            justify-content: center;
+            gap: 30px;
+        };
         &__h1 {
             font-family: 'Shrikhand';
             font-weight: 400;
