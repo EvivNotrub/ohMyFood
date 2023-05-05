@@ -927,6 +927,7 @@ but unfortunatly also a more complicated css*/
   width: 100%;
   max-width: 450px;
   height: 73px;
+  padding-right: 11.5px;
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
