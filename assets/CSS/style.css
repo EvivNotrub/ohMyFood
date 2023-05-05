@@ -554,7 +554,8 @@ but unfortunatly also a more complicated css*/
 }
 @media (min-width: 1024px) {
   .main-restaurants {
-    max-width: 73%;
+    width: 73%;
+    max-width: 1055px;
   }
 }
 

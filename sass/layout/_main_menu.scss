@@ -4,7 +4,8 @@
     width: 100%;
     max-width: 747.52px;
     @include desktop-only {
-        max-width: 73%;
+        width: 73%;
+        max-width: 1055px;
     }
     background-color: #F6F6F6;
     border-radius: 40px 40px 0px 0px;
