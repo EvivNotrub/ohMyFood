@@ -50,13 +50,17 @@
     z-index: 13;
     padding: 10vh 0;
     @include flex-clm-ai-center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20vh;
     @include desktop-only {
+        justify-content: center;
+        gap: 35vh;
+    };
+    @media (min-width: 1440px) {
         padding: 7vh 0;
         justify-content: flex-start;
         gap: 35vh;
-    }
+    };
         /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
         animation: loader-fade-out $loader-duration both, disappear 0.01s cubic-bezier(1,0,.8,.79) both $disappear-delay;
     &__logo {
