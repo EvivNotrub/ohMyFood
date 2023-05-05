@@ -1,4 +1,6 @@
-/****TOOLS****/
+
+
+/************TOOLS*************/
 @mixin img-full-cover {
     width: 100%;
     object-fit: cover;
@@ -92,6 +94,7 @@
     font-weight: 500;
 }
 @mixin circle-number {
+    flex: none;
     height: 24px;
     width: 24px;
     background-color: $bt-color1;

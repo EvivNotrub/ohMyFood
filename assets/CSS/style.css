@@ -12,7 +12,7 @@
 /****GUIDELINES****/
 /*ici gauche et droite != car décalage de 12px du rond rose*/
 /****RESTAURANTS****/
-/****TOOLS****/
+/************TOOLS*************/
 /**BREAKPOINTS**/
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
@@ -945,6 +945,7 @@ but unfortunatly also a more complicated css*/
   font-weight: 500;
 }
 .guidelines__lines__line__number {
+  flex: none;
   height: 24px;
   width: 24px;
   background-color: #9356DC;
