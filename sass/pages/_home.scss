@@ -52,7 +52,7 @@
     @include flex-clm-ai-center;
     justify-content: center;
     gap: 20vh;
-    @include desktop-only {
+    @media (min-width: 768px) and (max-width: 1439.99px) {
         justify-content: center;
         gap: 35vh;
     };
