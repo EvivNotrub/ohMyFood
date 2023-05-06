@@ -47,44 +47,13 @@
     }
     90% {
         opacity: 1;
+        animation-timing-function: cubic-bezier(.68,0,.59,1.04) ;
         }
     to {
         opacity: 0;
-        animation-timing-function: cubic-bezier(.68,0,.59,1.04) ;
     }
 }
-
-@media (min-width: 1024px) {
-    @for $i from 1 through $number-of-img {
-        $X:0;
-        $Y:0;
-        @if($i<3){
-            $Y: -100%;
-        }@else if($i<($number-of-img - 1)){
-            $Y: 0%;
-        }@else{
-            $Y: 100%;
-        };
-        @if(is-even($i)){
-            $X: 70%;
-        }@else{
-            $X: -70%;
-        };
-        @keyframes img-translation#{$i} {
-            from {
-                transform: translate($X, $Y) scale(2,2);
-                opacity: 0;
-            }
-            80% {
-                transform: translate(calc($X*0.26), calc($Y*0.2)) scale(1.4,1.6);
-            }
-            to {
-                transform: translate( 0, 0) scale(1, 1);
-                opacity: 1;
-            }
-        }
-    }
-};
+/************ LOADER KEYFRAMES *************/
 @keyframes disappear {
     from {
         transform: scale(1);
@@ -131,6 +100,38 @@
         transform: translateY(-30vh);
     }
   }
+
+    /********* IMAGES KEYFRAMES CALCULATION *******/
+    @for $i from 1 through $number-of-img {
+        $X:0;
+        $Y:0;
+        @if($i<3){
+            $Y: -100%;
+        }@else if($i<($number-of-img - 1)){
+            $Y: 0%;
+        }@else{
+            $Y: 100%;
+        };
+        @if(is-even($i)){
+            $X: 70%;
+        }@else{
+            $X: -70%;
+        };
+        @keyframes img-translation#{$i} {
+            from {
+                transform: translate($X, $Y) scale(2,2);
+                opacity: 0;
+            }
+            80% {
+                transform: translate(calc($X*0.26), calc($Y*0.2)) scale(1.4,1.6);
+            }
+            to {
+                transform: translate( 0, 0) scale(1, 1);
+                opacity: 1;
+            }
+        }
+    }
+
   /************Menu Dishes***********/
 @keyframes progressiv-appearance {
     from {

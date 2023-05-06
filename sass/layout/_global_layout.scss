@@ -25,10 +25,16 @@
         }
     }
     &.menus {
-        max-height: 339px;
+        max-height: 283px; /*from here and below, set a smaller height to container */
+        @include desktop-only { /*compared to content in order to have the overflowing*/
+            max-height: 439px; /* image with z-index:-1; and the menu on top of it*/
+        };
     }
     &__backgrd {
-        height: 325px;
+        height: 275px;
+        @include desktop-only {
+            height: 383px;
+        };
         background-size: cover;
         background-position: center;
         z-index: -1;
@@ -53,14 +59,7 @@
         gap: 0.4375rem;
         align-items: baseline;
     }
-}
-.white-svg {
-    @include filter-svg-white;
-}
-
-@media  (min-width: 768px) {
-    /****Footer****/
-    .footer {
+    @include from-tablet-up {
         font-size: 1.1rem;
         height: 114px;
         padding: 35px;
@@ -76,4 +75,7 @@
             gap: 15px;
         }
     }
+}
+.white-svg {
+    @include filter-svg-white;
 }

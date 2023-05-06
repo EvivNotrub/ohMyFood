@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /**COLORS**/
 /**FONT SIZES***/
+/****BREAKPOINTS***/
 /************menus*********/
 /**********HOME**********/
 /****LOADER****/
@@ -11,7 +12,7 @@
 /****GUIDELINES****/
 /*ici gauche et droite != car décalage de 12px du rond rose*/
 /****RESTAURANTS****/
-/****TOOLS****/
+/************TOOLS*************/
 /**BREAKPOINTS**/
 /****ELEMENTS OF HOME THAT CAN BE USED ON OTHER PAGES****/
 /****ELEMENTS OF HOME/GUIDELINES THAT COULD BE USED LATER****/
@@ -65,66 +66,13 @@
   }
   90% {
     opacity: 1;
+    animation-timing-function: cubic-bezier(0.68, 0, 0.59, 1.04);
   }
   to {
     opacity: 0;
-    animation-timing-function: cubic-bezier(0.68, 0, 0.59, 1.04);
   }
 }
-@media (min-width: 1024px) {
-  @keyframes img-translation1 {
-    from {
-      transform: translate(-70%, -100%) scale(2, 2);
-      opacity: 0;
-    }
-    80% {
-      transform: translate(-18.2%, -20%) scale(1.4, 1.6);
-    }
-    to {
-      transform: translate(0, 0) scale(1, 1);
-      opacity: 1;
-    }
-  }
-  @keyframes img-translation2 {
-    from {
-      transform: translate(70%, -100%) scale(2, 2);
-      opacity: 0;
-    }
-    80% {
-      transform: translate(18.2%, -20%) scale(1.4, 1.6);
-    }
-    to {
-      transform: translate(0, 0) scale(1, 1);
-      opacity: 1;
-    }
-  }
-  @keyframes img-translation3 {
-    from {
-      transform: translate(-70%, 100%) scale(2, 2);
-      opacity: 0;
-    }
-    80% {
-      transform: translate(-18.2%, 20%) scale(1.4, 1.6);
-    }
-    to {
-      transform: translate(0, 0) scale(1, 1);
-      opacity: 1;
-    }
-  }
-  @keyframes img-translation4 {
-    from {
-      transform: translate(70%, 100%) scale(2, 2);
-      opacity: 0;
-    }
-    80% {
-      transform: translate(18.2%, 20%) scale(1.4, 1.6);
-    }
-    to {
-      transform: translate(0, 0) scale(1, 1);
-      opacity: 1;
-    }
-  }
-}
+/************ LOADER KEYFRAMES *************/
 @keyframes disappear {
   from {
     transform: scale(1);
@@ -167,6 +115,59 @@
   }
   to {
     transform: translateY(-30vh);
+  }
+}
+/********* IMAGES KEYFRAMES CALCULATION *******/
+@keyframes img-translation1 {
+  from {
+    transform: translate(-70%, -100%) scale(2, 2);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-18.2%, -20%) scale(1.4, 1.6);
+  }
+  to {
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes img-translation2 {
+  from {
+    transform: translate(70%, -100%) scale(2, 2);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(18.2%, -20%) scale(1.4, 1.6);
+  }
+  to {
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes img-translation3 {
+  from {
+    transform: translate(-70%, 100%) scale(2, 2);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-18.2%, 20%) scale(1.4, 1.6);
+  }
+  to {
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes img-translation4 {
+  from {
+    transform: translate(70%, 100%) scale(2, 2);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(18.2%, 20%) scale(1.4, 1.6);
+  }
+  to {
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 1;
   }
 }
 /************Menu Dishes***********/
@@ -455,7 +456,7 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: subterfuge 0.25s ease-in both 5.75s;
+  animation: subterfuge 0.25s ease-in both 5.85s;
 }
 .card .checkbox-heart {
   position: absolute;
@@ -541,17 +542,39 @@ but unfortunatly also a more complicated css*/
   transform: translate(-50%, -50%);
 }
 
-.menu {
+.main-restaurants {
+  box-sizing: border-box;
   height: 100%;
-  max-width: 650px;
-  padding: 40px 13px;
+  width: 100%;
+  max-width: 747.52px;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
+  padding: 40px 13px;
+  margin: auto;
+}
+@media (min-width: 1024px) {
+  .main-restaurants {
+    width: 73%;
+    max-width: 1055px;
+  }
+}
+
+.menu {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  max-width: 611.91px;
   margin: auto;
+}
+@media (min-width: 768px) {
+  .menu {
+    width: 84.813%;
+    max-width: 700px;
+  }
 }
 .menu__head {
   box-sizing: border-box;
@@ -561,6 +584,12 @@ but unfortunatly also a more complicated css*/
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .menu__head {
+    justify-content: center;
+    gap: 30px;
+  }
 }
 .menu__head__h1 {
   font-family: "Shrikhand";
@@ -660,13 +689,23 @@ but unfortunatly also a more complicated css*/
   color: #353535;
 }
 .header.menus {
-  max-height: 339px;
+  max-height: 283px; /*from here and below, set a smaller height to container */
+}
+@media (min-width: 1024px) {
+  .header.menus { /*compared to content in order to have the overflowing*/
+    max-height: 439px; /* image with z-index:-1; and the menu on top of it*/
+  }
 }
 .header__backgrd {
-  height: 325px;
+  height: 275px;
   background-size: cover;
   background-position: center;
   z-index: -1;
+}
+@media (min-width: 1024px) {
+  .header__backgrd {
+    height: 383px;
+  }
 }
 
 /****FOOTER****/
@@ -688,13 +727,7 @@ but unfortunatly also a more complicated css*/
   gap: 0.4375rem;
   align-items: baseline;
 }
-
-.white-svg {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);
-}
-
 @media (min-width: 768px) {
-  /****Footer****/
   .footer {
     font-size: 1.1rem;
     height: 114px;
@@ -714,6 +747,11 @@ but unfortunatly also a more complicated css*/
     gap: 15px;
   }
 }
+
+.white-svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(105%) contrast(103%);
+}
+
 /**************************LOADER**************************/
 .hm-spinner {
   height: 115px;
@@ -755,7 +793,7 @@ but unfortunatly also a more complicated css*/
   justify-content: center;
   gap: 20vh;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 5.65s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 5.75s;
+  animation: loader-fade-out 5.65s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 5.85s;
 }
 .loader__background {
   background-color: rgba(255, 255, 255, 0.85);
@@ -766,12 +804,19 @@ but unfortunatly also a more complicated css*/
   width: 100%;
   height: 100%;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 5.65s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 5.75s;
+  animation: loader-fade-out 5.65s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 5.85s;
 }
 @media (min-width: 1024px) {
   .loader {
+    justify-content: center;
     gap: 35vh;
+  }
+}
+@media (min-width: 1440px) {
+  .loader {
+    padding: 7vh 0;
     justify-content: flex-start;
+    gap: 35vh;
   }
 }
 .loader__logo {
@@ -889,6 +934,7 @@ but unfortunatly also a more complicated css*/
   width: 100%;
   max-width: 450px;
   height: 73px;
+  padding-right: 11.5px;
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
@@ -899,6 +945,7 @@ but unfortunatly also a more complicated css*/
   font-weight: 500;
 }
 .guidelines__lines__line__number {
+  flex: none;
   height: 24px;
   width: 24px;
   background-color: #9356DC;

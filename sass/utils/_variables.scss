@@ -24,6 +24,14 @@
     $small-title: 1.125rem;
     $small-txt: 0.9475rem;
 
+/****BREAKPOINTS***/
+
+$breakpoints: (
+    low: 768px,
+    middle: 1024px,
+    high: 1440px
+);
+
 /************menus*********/
     $dish-check-width: 59px;
     $dish-spacing-width: 15px;
@@ -50,7 +58,7 @@
     
     $total-loader-duration: max($logo-anim-duration, $imgs-anim-duration, $counter-anim-duration ) + max($logo-anim-delay, $imgs-anim-delay);
     $loader-duration: $total-loader-duration + 0.7s ;
-    $disappear-delay: $loader-duration + 0.1s; 
+    $disappear-delay: $loader-duration + 0.2s; 
     /**because there is a hight z-index : needs to be gone just after the effects**/
 
     /***linear gradient on loader letters? if not discard somme variables below****/
