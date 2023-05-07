@@ -136,18 +136,32 @@
         font-size: $small-title;
         color: $fourth-color;
     }
+    @include  from-tablet-up {
+        &__title {
+            font-size: $huge-title;
+        }
+    }
 }
 
 /****GUIDELINES****/
 .guidelines {
     padding: $guidelines-bx-paddg;
+    @include  from-tablet-up {
+        > * {
+            max-width: 1100px;
+            margin: auto;
+        }
+    }
     &__title {
         padding: 25px 0;
         transform: translate(-12px); /*in order to align with the number below wich is 24px wide but halfway translated left*/
     }
     &__lines{
         @include flex-clm;
-        gap: 25px;      
+        gap: 25px;
+        @include  from-tablet-up {
+            @include flex-r-ai-center;
+        }
         &__line {
             @include guidelines-boxes;
             &__number {
@@ -162,10 +176,21 @@
 .restaurants {
     background-color: $secondary-bg-color;
     padding: $restrt-bx-paddg;
+    @include  from-tablet-up {
+        > * {
+            max-width: 1100px;
+            margin: auto;
+        }
+    }
     &__title {
         padding-bottom: 27px;
     }
     &__cards {
+        @include  from-tablet-up {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 50px 100px;
+        }
         max-width: 1100px;
         margin: auto;
         display: grid;
@@ -183,34 +208,6 @@
                     }
                 }
             }            
-        }
-    }
-}
-
-@include  from-tablet-up {
-    .discover {
-        &__title {
-            font-size: $huge-title;
-        }
-    }
-    .guidelines {
-        > * {
-            max-width: 1100px;
-            margin: auto;
-        }
-        &__lines {
-            @include flex-r-ai-center;
-        }
-    }
-    .restaurants {
-        > * {
-            max-width: 1100px;
-            margin: auto;
-        }
-        &__cards {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(2, 1fr);
-            gap: 50px 100px;
         }
     }
 }
