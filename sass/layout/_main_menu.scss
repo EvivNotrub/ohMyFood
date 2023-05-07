@@ -74,7 +74,8 @@
                 @for $l from 1 through 7 {                
                     &--#{$l} {
                         $delay: calc((($l) * 0.12s) + 0.5s);
-                        animation: progressiv-appearance 0.35s ease-in-out both $delay;
+                        animation: progressiv-appearance 0.35s ease-in-out backwards $delay;
+                        /*here only BACKWARDS because in interferes with hover properties in cards using transform */
                     }
                 }
             }

@@ -6,6 +6,10 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;
+    transition: all 0.12s ease-in-out;
+    &:hover {
+        transform: scale(1.008) translate(0.6px, -0.8px);
+    }
     &__link {
         position: unset;
         &__img {
@@ -65,6 +69,10 @@ but unfortunatly also a more complicated css*/
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
+    transition: all 0.12s ease-in-out;
+    &:hover {
+        transform: scale(1.008) translate(0.6px, -0.8px);
+    }
     &__details {
         @include flex-clm-jc-center; /*is needed to ensure that the price
                 and text alignment stays right given the extra span */
