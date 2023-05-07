@@ -728,6 +728,7 @@ but unfortunatly also a more complicated css*/
   background-color: #353535;
   padding: 22px 25px;
   color: #FFFFFF;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -760,6 +761,11 @@ but unfortunatly also a more complicated css*/
     flex-direction: row;
     align-items: center;
     gap: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    padding-right: 15vw;
   }
 }
 

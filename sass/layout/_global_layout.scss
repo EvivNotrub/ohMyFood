@@ -48,6 +48,7 @@
     background-color: $fourth-color;
     padding: 22px 25px;
     color: $footer-font-color;
+    box-sizing: border-box;
     @include flex-clm;
     align-items: baseline;
     gap: 1rem;
@@ -74,6 +75,9 @@
             @include flex-r-ai-center;
             gap: 15px;
         }
+    }
+    @media (min-width: 1440px) {
+        padding-right: 15vw;
     }
 }
 .white-svg {
