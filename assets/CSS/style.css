@@ -460,7 +460,7 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: subterfuge 0.25s ease-in both 3.77s;
+  animation: subterfuge 0.25s ease-in both 3.5868s;
 }
 .card .checkbox-heart {
   position: absolute;
@@ -814,7 +814,7 @@ but unfortunatly also a more complicated css*/
   justify-content: center;
   gap: 20vh;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 3.57s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 3.77s;
+  animation: loader-fade-out 3.3868s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 3.5868s;
 }
 .loader__background {
   background-color: rgba(255, 255, 255, 0.85);
@@ -825,7 +825,7 @@ but unfortunatly also a more complicated css*/
   width: 100%;
   height: 100%;
   /**because there is a hight z-index : second animation is quick, it needs to be gone just after the effects**/
-  animation: loader-fade-out 3.57s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 3.77s;
+  animation: loader-fade-out 3.3868s both, disappear 0.01s cubic-bezier(1, 0, 0.8, 0.79) both 3.5868s;
 }
 @media (min-width: 768px) and (max-width: 1439.99px) {
   .loader {
@@ -854,31 +854,31 @@ but unfortunatly also a more complicated css*/
   color: transparent;
   padding: 0 25px; /*to avoid letter cut-off -> see comment in Readme/LOADER*/
   margin: 0 -25px;
-  animation: loader-down-twist 0.25s cubic-bezier(0.49, 0.5, 0.51, 1.34) backwards;
+  animation: loader-down-twist 0.285s cubic-bezier(0.49, 0.5, 0.51, 1.34) backwards;
 }
 .loader__logo .letter--1 {
-  animation-delay: 2.23125s;
+  animation-delay: 2.052425s;
 }
 .loader__logo .letter--2 {
-  animation-delay: 2.2625s;
+  animation-delay: 2.08805s;
 }
 .loader__logo .letter--3 {
-  animation-delay: 2.29375s;
+  animation-delay: 2.123675s;
 }
 .loader__logo .letter--4 {
-  animation-delay: 2.325s;
+  animation-delay: 2.1593s;
 }
 .loader__logo .letter--5 {
-  animation-delay: 2.35625s;
+  animation-delay: 2.194925s;
 }
 .loader__logo .letter--6 {
-  animation-delay: 2.3875s;
+  animation-delay: 2.23055s;
 }
 .loader__logo .letter--7 {
-  animation-delay: 2.41875s;
+  animation-delay: 2.266175s;
 }
 .loader__logo .letter--8 {
-  animation-delay: 2.45s;
+  animation-delay: 2.3018s;
 }
 .loader__counter {
   padding-bottom: 6vh;
@@ -886,11 +886,11 @@ but unfortunatly also a more complicated css*/
   align-items: center;
   justify-content: center;
   gap: 10%;
-  animation: descent 1.15s cubic-bezier(0.47, -0.5, 0.49, 1.6) 0.85s both;
+  animation: descent 1.13s cubic-bezier(0.47, -0.5, 0.49, 1.6) 0.85s both;
 }
 @media (min-width: 1024px) {
   .loader__counter {
-    animation: ascent 1.15s cubic-bezier(0.47, -0.5, 0.49, 1.6) 0.85s both;
+    animation: ascent 1.13s cubic-bezier(0.47, -0.5, 0.49, 1.6) 0.85s both;
   }
 }
 .loader__counter__txt {

@@ -46,15 +46,15 @@ $breakpoints: (
     $horizontal-space: 5vw;
 
 
-    $counter-anim-duration: 1.15s;
+    $counter-anim-duration: 1.13s;
     $counter-anim-delay: 0.85s;
 
     $imgs-anim-duration: 1.82s;
     $imgs-anim-delay: 0.86s;
     $img-anim-delay: calc($imgs-anim-duration/7);
 
-    $logo-anim-duration: 0.25s;
-    $logo-anim-delay: 2.2s;
+    $logo-anim-duration: 0.285s;
+    $logo-anim-delay: 2.0168s;
     $letter-anim-delay: calc($logo-anim-duration/8);
     
     $total-loader-duration: max($logo-anim-duration, $imgs-anim-duration, $counter-anim-duration ) + max($logo-anim-delay, $imgs-anim-delay, $counter-anim-delay);
