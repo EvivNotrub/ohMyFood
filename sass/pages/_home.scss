@@ -96,10 +96,10 @@
             font-family: 'Shrikhand';
             font-size: $counter-size;
             color: $counter-color;  
-            animation: subterfuge 1.2s cubic-bezier(.7,.06,.74,1.94) 1s both ;
+            animation: subterfuge 0.72s cubic-bezier(.7,.06,.74,1.94) 0.45s both ;
         }
         &__spinner {
-            animation: transX 0.8s ease-in-out both 0.8s;
+            animation: transX 0.6s ease-in-out both 0.28s;
         }
     }        
 }
